@@ -72,16 +72,20 @@ create table public.vaults (
 
 alter table public.vaults enable row level security;
 
--- Helpers: check membership and role
+-- vault_member_role uses plpgsql so table refs are resolved at call-time, not definition time
 create or replace function public.vault_member_role(p_vault_id uuid, p_user_id uuid)
 returns text
-language sql
+language plpgsql
 security definer set search_path = ''
 stable
 as $$
-  select role from public.vault_members
-  where vault_id = p_vault_id and user_id = p_user_id
-  limit 1;
+begin
+  return (
+    select role from public.vault_members
+    where vault_id = p_vault_id and user_id = p_user_id
+    limit 1
+  );
+end;
 $$;
 
 create policy "Vault members can view their vault"
@@ -90,6 +94,7 @@ create policy "Vault members can view their vault"
     public.vault_member_role(id, auth.uid()) is not null
   );
 
+-- Policies for vaults that don't use vault_member_role
 create policy "Vault owner can update vault"
   on public.vaults for update
   using (owner_id = auth.uid());

@@ -44,7 +44,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = 'stammfeuer-export.json'
+      a.download = 'ahnenecho-export.json'
       a.click()
       URL.revokeObjectURL(url)
     } catch {

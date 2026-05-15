@@ -85,7 +85,7 @@ export default async function PricingPage({ params }: PricingPageProps) {
             ))}
           </ul>
           <a
-            href="mailto:info@stammfeuer.app"
+            href="mailto:info@ahnenecho.app"
             className="w-full border-2 border-amber-600 text-amber-600 font-semibold px-4 py-4 rounded-xl text-center hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors text-lg"
           >
             Kontakt aufnehmen
@@ -99,7 +99,7 @@ export default async function PricingPage({ params }: PricingPageProps) {
           &ldquo;Was wäre es wert, Omas Rezept in 20 Jahren noch zu lesen?&rdquo;
         </p>
         <p className="text-base text-gray-600 dark:text-stone-400">
-          Ein Fotoalbum-Druck kostet €40 bis 80. Stammfeuer Pro ist €79 für ein ganzes Jahr.
+          Ein Fotoalbum-Druck kostet €40 bis 80. Ahnenecho Pro ist €79 für ein ganzes Jahr.
         </p>
       </div>
     </div>

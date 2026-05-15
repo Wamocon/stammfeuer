@@ -81,7 +81,7 @@ export default function InviteAcceptClient({ locale, token }: InviteAcceptClient
           Du wurdest eingeladen
         </h1>
         <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400 mb-6">
-          Jemand aus deiner Familie möchte dich zu ihrem Stammfeuer-Archiv einladen.
+          Jemand aus deiner Familie möchte dich zu ihrem Ahnenecho-Archiv einladen.
         </p>
         {status === 'loading' ? (
           <div className="flex justify-center"><LoadingSpinner /></div>

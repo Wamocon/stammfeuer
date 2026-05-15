@@ -16,7 +16,7 @@ export default function AgbPage() {
           <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">§ 1 Geltungsbereich</h2>
           <p className="mb-3">
             Diese AGB der WAMOCON GmbH, Mergenthalerallee 79 - 81, 65760 Eschborn (nachfolgend &ldquo;Anbieter&rdquo;),
-            gelten für alle Verträge über die Nutzung der Plattform Stammfeuer (stammfeuer.app).
+            gelten für alle Verträge über die Nutzung der Plattform Ahnenecho (ahnenecho.app).
           </p>
           <p>
             Abweichende AGB werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt schriftlich zu.
@@ -34,7 +34,7 @@ export default function AgbPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">§ 3 Leistungsbeschreibung</h2>
           <p>
-            Stammfeuer ist eine Software-as-a-Service-Plattform für die generationsübergreifende Archivierung
+            Ahnenecho ist eine Software-as-a-Service-Plattform für die generationsübergreifende Archivierung
             von Familiengeschichten, Rezepten, Traditionen und Weisheiten. Der genaue Funktionsumfang ergibt
             sich aus der jeweils aktuellen Leistungsbeschreibung.
           </p>
@@ -81,7 +81,7 @@ export default function AgbPage() {
             Kostenlose Accounts können jederzeit gelöscht werden. Kostenpflichtige Abonnements können zum Ende
             der bezahlten Laufzeit gekündigt werden. Die Kündigung erfolgt über die Account-Einstellungen
             oder per E-Mail an{' '}
-            <a href="mailto:info@stammfeuer.app" className="text-amber-600 hover:underline">info@stammfeuer.app</a>.
+            <a href="mailto:info@ahnenecho.app" className="text-amber-600 hover:underline">info@ahnenecho.app</a>.
           </p>
         </section>
 

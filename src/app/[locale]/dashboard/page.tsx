@@ -61,7 +61,7 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-stone-50 mb-2">
-            Willkommen bei Stammfeuer
+            Willkommen bei Ahnenecho
           </h1>
           <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400 mb-6">
             {tVault('createFirst')}

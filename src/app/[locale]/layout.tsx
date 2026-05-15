@@ -26,12 +26,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Stammfeuer',
-    default: 'Stammfeuer - Das Gedächtnis deiner Familie',
+    template: '%s | Ahnenecho',
+    default: 'Ahnenecho - Das Gedächtnis deiner Familie',
   },
   description:
     'Das kollaborative Familienarchiv. Bewahre Geschichten, Rezepte, Traditionen und Weisheiten für alle Generationen.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'https://stammfeuer.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'https://ahnenecho.app'),
 }
 
 interface LocaleLayoutProps {

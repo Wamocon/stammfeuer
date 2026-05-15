@@ -1,4 +1,4 @@
-# Stammfeuer - Marketing- und Designkonzept
+﻿# Ahnenecho - Marketing- und Designkonzept
 
 **Version 1.0 | Stand: Mai 2026 | WAMOCON GmbH**
 
@@ -6,111 +6,111 @@
 
 ## Inhaltsverzeichnis
 
-1. [Positionierung und Markenidentität](#1-positionierung-und-markenidentität)
+1. [Positionierung und MarkenidentitÃ¤t](#1-positionierung-und-markenidentitÃ¤t)
 2. [Zielgruppenanalyse](#2-zielgruppenanalyse)
 3. [Messaging-Strategie](#3-messaging-strategie)
 4. [Designsprache (Brand Identity)](#4-designsprache-brand-identity)
 5. [Go-to-Market-Strategie](#5-go-to-market-strategie)
-6. [Content-Marketing und Kanäle](#6-content-marketing-und-kanäle)
+6. [Content-Marketing und KanÃ¤le](#6-content-marketing-und-kanÃ¤le)
 7. [Pricing-Kommunikation](#7-pricing-kommunikation)
 8. [Wachstumsmechaniken](#8-wachstumsmechaniken)
 
 ---
 
-## 1. Positionierung und Markenidentität
+## 1. Positionierung und MarkenidentitÃ¤t
 
 ### Kern-Positionierung
 
-Stammfeuer ist **kein Produktivitätstool**. Es ist ein emotionales Erbe-Archiv.
+Ahnenecho ist **kein ProduktivitÃ¤tstool**. Es ist ein emotionales Erbe-Archiv.
 
 **Positioning Statement:**
-> Für Familien, die verstehen, dass Erinnerungen vergehen, ist Stammfeuer das gemeinsame Familienarchiv, das Geschichten, Rezepte, Traditionen und Weisheiten generationsübergreifend bewahrt - weil Großmutters Wissen mehr wert ist als jede Cloud-Notiz.
+> FÃ¼r Familien, die verstehen, dass Erinnerungen vergehen, ist Ahnenecho das gemeinsame Familienarchiv, das Geschichten, Rezepte, Traditionen und Weisheiten generationsÃ¼bergreifend bewahrt - weil GroÃŸmutters Wissen mehr wert ist als jede Cloud-Notiz.
 
 **Im Unterschied zu:**
 - Google Fotos / iCloud: Reiner Medien-Speicher, keine Struktur, kein Kontext, kein Wissenstransfer
-- Facebook / Instagram: Social Media mit Öffentlichkeit, algorithmisch, kurzlebig
-- Notion / Obsidian: Produktivitätstools, keine emotionale Komponente, technisch komplex
-- FamilySearch / MyHeritage: Historisch/genealogisch, nicht für lebendiges Wissensarchiv
+- Facebook / Instagram: Social Media mit Ã–ffentlichkeit, algorithmisch, kurzlebig
+- Notion / Obsidian: ProduktivitÃ¤tstools, keine emotionale Komponente, technisch komplex
+- FamilySearch / MyHeritage: Historisch/genealogisch, nicht fÃ¼r lebendiges Wissensarchiv
 
-**Stammfeuer ist der einzige Dienst, der explizit für den Transfer von lebendigem Familienwissen an die nächste Generation gebaut ist.**
+**Ahnenecho ist der einzige Dienst, der explizit fÃ¼r den Transfer von lebendigem Familienwissen an die nÃ¤chste Generation gebaut ist.**
 
 ### Markenkern
 
-| Dimension | Ausprägung |
+| Dimension | AusprÃ¤gung |
 |---|---|
 | **Mission** | Kein Familienwissen soll verloren gehen |
-| **Vision** | Jede Familie hat ein lebendiges Archiv, das über Generationen weitergeführt wird |
-| **Werte** | Wärme, Gemeinschaft, Verantwortung, Bewahrung, Einfachheit |
-| **Stimme** | Warm, einladend, nie technisch, nie kühl |
-| **Tagline (DE)** | "Das Feuer deiner Familie, für immer am Brennen." |
-| **Tagline (EN)** | "Your family's fire, burning forever." |
+| **Vision** | Jede Familie hat ein lebendiges Archiv, das Ã¼ber Generationen weitergefÃ¼hrt wird |
+| **Werte** | WÃ¤rme, Gemeinschaft, Verantwortung, Bewahrung, Einfachheit |
+| **Stimme** | Warm, einladend, nie technisch, nie kÃ¼hl |
+| **Tagline (DE)** | "Das Echo deiner Ahnen, für immer lebendig." |
+| **Tagline (EN)** | "Your ancestors' echo, alive forever." |
 
 ### Markenname
 
-**Stammfeuer** kombiniert:
+**Ahnenecho** kombiniert:
 - **Stamm** = Stammbaum, Familie, Ursprung, Stamm eines Baumes (Verwurzelung)
-- **Feuer** = Lagerfeuer (Erzählkultur), Flamme (Lebendigkeit), Wärme (Emotion)
+- **Feuer** = Lagerfeuer (ErzÃ¤hlkultur), Flamme (Lebendigkeit), WÃ¤rme (Emotion)
 
-Der Name funktioniert ausschließlich auf Deutsch - das ist bewusst und ein Differenzierungsmerkmal. Er klingt nach Heimat, Geborgenheit und Tradition.
+Der Name funktioniert ausschlieÃŸlich auf Deutsch - das ist bewusst und ein Differenzierungsmerkmal. Er klingt nach Heimat, Geborgenheit und Tradition.
 
 ---
 
 ## 2. Zielgruppenanalyse
 
-### Primäre Zielgruppe - "Die Brücken-Generation"
+### PrimÃ¤re Zielgruppe - "Die BrÃ¼cken-Generation"
 
 **Demografisch:**
 - Alter: 35-55 Jahre
-- Rolle in der Familie: Kinder von älteren Eltern (60+), selbst Eltern von Teenagern/jungen Erwachsenen
+- Rolle in der Familie: Kinder von Ã¤lteren Eltern (60+), selbst Eltern von Teenagern/jungen Erwachsenen
 - Digital: Smartphone-versiert, nutzen WhatsApp, Instagram, aber auch E-Mail
-- Befürchtung: "Ich frage mich, wer nach Oma stirbt noch ihr Gulasch-Rezept kennt"
+- BefÃ¼rchtung: "Ich frage mich, wer nach Oma stirbt noch ihr Gulasch-Rezept kennt"
 
 **Psychografisch:**
 - Nostalgisch, familienbewusst
-- Spüren die Dringlichkeit - Großeltern werden älter
-- Würden gerne mehr aufschreiben, wissen aber nicht wie und womit
-- Schätzen Einfachheit: kein Tool mit langer Lernkurve
+- SpÃ¼ren die Dringlichkeit - GroÃŸeltern werden Ã¤lter
+- WÃ¼rden gerne mehr aufschreiben, wissen aber nicht wie und womit
+- SchÃ¤tzen Einfachheit: kein Tool mit langer Lernkurve
 
 **Buyer Journey:**
-1. **Auslöser:** Verlust eines Familienmitglieds, Geburt eines Kindes, Familienfest, Umzug
+1. **AuslÃ¶ser:** Verlust eines Familienmitglieds, Geburt eines Kindes, Familienfest, Umzug
 2. **Suche:** "Familiengeschichte digitalisieren", "Omas Rezepte sichern"
 3. **Entscheidung:** Einfache Registrierung, kostenloser Einstieg, Einladung der Familie
 
-### Sekundäre Zielgruppe - "Die Erzählenden"
+### SekundÃ¤re Zielgruppe - "Die ErzÃ¤hlenden"
 
 **Demografisch:**
 - Alter: 65-85 Jahre
 - Nutzen das Tool indirekt - werden von Kindern/Enkeln eingeladen
 - Smartphone-Nutzung: WhatsApp, Fotos, aber keine komplexen Apps
-- Bedürfnis: Ihr Wissen weitergeben, solange sie können
+- BedÃ¼rfnis: Ihr Wissen weitergeben, solange sie kÃ¶nnen
 
-**Wichtig:** Diese Gruppe entscheidet nicht selbst über das Tool - sie werden eingeladen. Die UX muss für sie zugänglich sein (große Schrift, einfache Navigation, Spracheingabe als Kernfunktion).
+**Wichtig:** Diese Gruppe entscheidet nicht selbst Ã¼ber das Tool - sie werden eingeladen. Die UX muss fÃ¼r sie zugÃ¤nglich sein (groÃŸe Schrift, einfache Navigation, Spracheingabe als Kernfunktion).
 
-### Tertiäre Zielgruppe - "Die Verwalter"
+### TertiÃ¤re Zielgruppe - "Die Verwalter"
 
-- Familienoberhäupter / Stammhalter
+- FamilienoberhÃ¤upter / Stammhalter
 - Verwalten den Vault, laden ein, pflegen Struktur
-- Bereit für Pro-Plan, wenn der Wert klar ist
+- Bereit fÃ¼r Pro-Plan, wenn der Wert klar ist
 - B2B-Potenzial: Kulturvereine, Kirchen, Volksschulen (Familiengeschichte-Projekte)
 
 ### Persona-Karten
 
-**Persona 1: Claudia, 42, München**
+**Persona 1: Claudia, 42, MÃ¼nchen**
 - Mutter von zwei Kindern (9 und 14), ihre Schwiegereltern sind 78 und 81
 - "Schwiegermutter macht die beste Linzertor te der Welt, aber niemand hat das Rezept"
 - Hat iCloud Fotos, aber alles ist unstrukturiert
-- Wäre bereit €9,90/Monat zu zahlen, wenn es "einfach und schön" ist
+- WÃ¤re bereit â‚¬9,90/Monat zu zahlen, wenn es "einfach und schÃ¶n" ist
 
 **Persona 2: Hans, 74, Wien**
 - Pensionierter Lehrer, tippt langsam, nutzt WhatsApp
-- Hat hunderte Geschichten aus der Kindheit, die er gerne aufschreiben würde
-- Würde die Spracheingabe lieben - aber braucht jemanden der ihm die App erklärt
+- Hat hunderte Geschichten aus der Kindheit, die er gerne aufschreiben wÃ¼rde
+- WÃ¼rde die Spracheingabe lieben - aber braucht jemanden der ihm die App erklÃ¤rt
 - Wird von seiner Tochter eingeladen
 
 **Persona 3: Lena, 28, Berlin**
 - Hat ihre Oma verloren - mit ihr viele Familiengeschichten
-- Will sicherstellen, dass das mit ihren Großeltern mütterlicherseits nicht passiert
-- Tech-affin, kann die App eigenständig einrichten
+- Will sicherstellen, dass das mit ihren GroÃŸeltern mÃ¼tterlicherseits nicht passiert
+- Tech-affin, kann die App eigenstÃ¤ndig einrichten
 - Teilt gerne auf Social Media
 
 ---
@@ -120,7 +120,7 @@ Der Name funktioniert ausschließlich auf Deutsch - das ist bewusst und ein Diff
 ### Core Message
 
 **Deutsch:**
-> "Großmutters Rezepte. Opas Kriegsgeschichten. Die Tradition, die deine Familie zusammenhält. All das verschwindet - es sei denn, ihr bewahrt es gemeinsam."
+> "GroÃŸmutters Rezepte. Opas Kriegsgeschichten. Die Tradition, die deine Familie zusammenhÃ¤lt. All das verschwindet - es sei denn, ihr bewahrt es gemeinsam."
 
 **Englisch:**
 > "Grandma's recipes. Grandpa's stories. The traditions that hold your family together. All of it disappears - unless you preserve it together."
@@ -128,35 +128,35 @@ Der Name funktioniert ausschließlich auf Deutsch - das ist bewusst und ein Diff
 ### Messaging-Hierarchie
 
 **Ebene 1 - Emotionaler Aufruf (Hook):**
-- "Was passiert, wenn niemand mehr weiß, woher ihr kommt?"
-- "Jeden Tag geht ein Stück eurer Familiengeschichte verloren."
+- "Was passiert, wenn niemand mehr weiÃŸ, woher ihr kommt?"
+- "Jeden Tag geht ein StÃ¼ck eurer Familiengeschichte verloren."
 - "Das Rezept kennt nur sie. Die Geschichte kennt nur er."
 
 **Ebene 2 - Problem-Amplifikation:**
-- 90 % des mündlich überlieferten Wissens einer Familie gehen innerhalb von zwei Generationen verloren
-- WhatsApp-Gruppen sind kein Archiv - Nachrichten werden gelöscht, Fotoalben gehen verloren
-- Keiner fragt die Großeltern - bis es zu spät ist
+- 90 % des mÃ¼ndlich Ã¼berlieferten Wissens einer Familie gehen innerhalb von zwei Generationen verloren
+- WhatsApp-Gruppen sind kein Archiv - Nachrichten werden gelÃ¶scht, Fotoalben gehen verloren
+- Keiner fragt die GroÃŸeltern - bis es zu spÃ¤t ist
 
-**Ebene 3 - Lösung / Nutzen:**
-- Strukturiertes Archiv für 6 Wissenstypen: Geschichten, Rezepte, Traditionen, Weisheiten, Orte, Fotos
-- Gemeinsam - jedes Familienmitglied trägt bei
-- KI-gestützte Prompts erinnern jede Woche daran ("Was war dein schönster Sommer als Kind?")
+**Ebene 3 - LÃ¶sung / Nutzen:**
+- Strukturiertes Archiv fÃ¼r 6 Wissenstypen: Geschichten, Rezepte, Traditionen, Weisheiten, Orte, Fotos
+- Gemeinsam - jedes Familienmitglied trÃ¤gt bei
+- KI-gestÃ¼tzte Prompts erinnern jede Woche daran ("Was war dein schÃ¶nster Sommer als Kind?")
 - Spracheingabe: Oma spricht einfach - die App schreibt auf
 
 **Ebene 4 - Beweise / Vertrauen:**
 - DSGVO-konform, Server in Europa
-- Daten gehören euch - exportierbar jederzeit
+- Daten gehÃ¶ren euch - exportierbar jederzeit
 - Von WAMOCON entwickelt
 
 ### Tagline-Varianten nach Kontext
 
 | Kontext | Tagline |
 |---|---|
-| Homepage Hero | "Das Feuer deiner Familie, für immer am Brennen." |
-| Social Media | "Bewahrt, was wirklich zählt." |
+| Homepage Hero | "Das Feuer deiner Familie, fÃ¼r immer am Brennen." |
+| Social Media | "Bewahrt, was wirklich zÃ¤hlt." |
 | Email-Betreff | "Wann hast du Oma zuletzt nach ihrer Geschichte gefragt?" |
 | App-Onboarding | "Willkommen zu eurem Familienarchiv." |
-| Pricing | "Weniger als ein Kaffee im Monat. Ein Erbe für immer." |
+| Pricing | "Weniger als ein Kaffee im Monat. Ein Erbe fÃ¼r immer." |
 | Push-Notification | "Diese Woche: Was war der wichtigste Ratschlag, den du je bekamst?" |
 
 ---
@@ -165,17 +165,17 @@ Der Name funktioniert ausschließlich auf Deutsch - das ist bewusst und ein Diff
 
 ### Philosophie
 
-Stammfeuer kombiniert **emotionale Wärme** mit **digitaler Klarheit**. Das Design soll sich anfühlen wie:
+Ahnenecho kombiniert **emotionale WÃ¤rme** mit **digitaler Klarheit**. Das Design soll sich anfÃ¼hlen wie:
 - Ein altes Familienfotoalbum, aber digital und geteilt
 - Ein Lagerfeuerabend - warm, gemeinschaftlich, zeitlos
 - Nicht wie eine SaaS-App - wie ein Zuhause
 
 **Designprinzipien:**
-1. **Wärme vor Effizienz** - Farben und Formen laden ein, nicht auf
-2. **Lesbarkeit ist Respekt** - ältere Nutzer sind Kern-Zielgruppe
-3. **Konsistenz schafft Vertrauen** - gleiche Muster überall
-4. **Leere ist schön** - genug Weißraum, kein visuelles Rauschen
-5. **Interaktion fühlt sich lebendig an** - dezente Animationen wo sinnvoll
+1. **WÃ¤rme vor Effizienz** - Farben und Formen laden ein, nicht auf
+2. **Lesbarkeit ist Respekt** - Ã¤ltere Nutzer sind Kern-Zielgruppe
+3. **Konsistenz schafft Vertrauen** - gleiche Muster Ã¼berall
+4. **Leere ist schÃ¶n** - genug WeiÃŸraum, kein visuelles Rauschen
+5. **Interaktion fÃ¼hlt sich lebendig an** - dezente Animationen wo sinnvoll
 
 ---
 
@@ -184,49 +184,49 @@ Stammfeuer kombiniert **emotionale Wärme** mit **digitaler Klarheit**. Das Desi
 #### Brand-Palette
 
 ```
-Primär (Amber / Stammfeuer-Flamme):
-  amber-600:  #d97706  ← Haupt-CTA, aktive Elemente, Links
-  amber-500:  #f59e0b  ← Hover-Zustände
-  amber-100:  #fef3c7  ← Hintergrundakzente, Badges
+PrimÃ¤r (Amber / Ahnenecho-Flamme):
+  amber-600:  #d97706  â† Haupt-CTA, aktive Elemente, Links
+  amber-500:  #f59e0b  â† Hover-ZustÃ¤nde
+  amber-100:  #fef3c7  â† Hintergrundakzente, Badges
 
 Akzent (Tiefrot / Glut):
-  red-700:    #b91c1c  ← Sekundäre CTAs, Danger-Aktionen
-  red-600:    #dc2626  ← Hover Danger
+  red-700:    #b91c1c  â† SekundÃ¤re CTAs, Danger-Aktionen
+  red-600:    #dc2626  â† Hover Danger
 
-Neutral (Warmweiß / Pergament):
-  warm-50:    #fdfaf6  ← Haupt-Hintergrund (hell)
-  warm-100:   #f5f0e8  ← Karten-Hintergrund (hell)
-  warm-200:   #e8dfd0  ← Borders, Divider (hell)
+Neutral (WarmweiÃŸ / Pergament):
+  warm-50:    #fdfaf6  â† Haupt-Hintergrund (hell)
+  warm-100:   #f5f0e8  â† Karten-Hintergrund (hell)
+  warm-200:   #e8dfd0  â† Borders, Divider (hell)
 
 Text:
-  gray-900:   #111827  ← Primärtext (hell)
-  gray-600:   #4b5563  ← Sekundärtext (hell)
-  gray-400:   #9ca3af  ← Placeholder (hell)
+  gray-900:   #111827  â† PrimÃ¤rtext (hell)
+  gray-600:   #4b5563  â† SekundÃ¤rtext (hell)
+  gray-400:   #9ca3af  â† Placeholder (hell)
 ```
 
 #### Dark Mode Palette
 
 ```
 Hintergrund:
-  dark-bg:    #1c1917  ← (stone-900) Haupt-Hintergrund
-  dark-card:  #292524  ← (stone-800) Karten-Hintergrund
-  dark-border:#44403c  ← (stone-700) Borders
+  dark-bg:    #1c1917  â† (stone-900) Haupt-Hintergrund
+  dark-card:  #292524  â† (stone-800) Karten-Hintergrund
+  dark-border:#44403c  â† (stone-700) Borders
 
 Text:
-  dark-text:  #fafaf9  ← (stone-50) Primärtext
-  dark-muted: #a8a29e  ← (stone-400) Sekundärtext
+  dark-text:  #fafaf9  â† (stone-50) PrimÃ¤rtext
+  dark-muted: #a8a29e  â† (stone-400) SekundÃ¤rtext
 
 Akzente:
-  amber-400:  #fbbf24  ← Primär im Dark Mode (heller)
-  amber-300:  #fcd34d  ← Hover im Dark Mode
+  amber-400:  #fbbf24  â† PrimÃ¤r im Dark Mode (heller)
+  amber-300:  #fcd34d  â† Hover im Dark Mode
 ```
 
 #### Verwendungsregeln
 
-- **Nie** reines Schwarz (#000000) auf reinem Weiß (#ffffff) - zu hart für ältere Augen
+- **Nie** reines Schwarz (#000000) auf reinem WeiÃŸ (#ffffff) - zu hart fÃ¼r Ã¤ltere Augen
 - **Amber** dominiert CTAs und Highlights - nie Blau oder Lila
-- **Roter Akzent** nur für Danger-Aktionen und wenige Highlights - nicht als Grund farbe
-- **Warm-Töne** in allen Hintergründen - niemals kühles Grau oder Weiß
+- **Roter Akzent** nur fÃ¼r Danger-Aktionen und wenige Highlights - nicht als Grund farbe
+- **Warm-TÃ¶ne** in allen HintergrÃ¼nden - niemals kÃ¼hles Grau oder WeiÃŸ
 
 ---
 
@@ -234,28 +234,28 @@ Akzente:
 
 #### Schriftfamilien
 
-| Rolle | Schrift | Gewicht | Größe |
+| Rolle | Schrift | Gewicht | GrÃ¶ÃŸe |
 |---|---|---|---|
-| Überschriften | Geist (variable) | 700-800 | 2xl - 5xl |
-| Fließtext | Geist (variable) | 400 | 16px Minimum |
+| Ãœberschriften | Geist (variable) | 700-800 | 2xl - 5xl |
+| FlieÃŸtext | Geist (variable) | 400 | 16px Minimum |
 | Labels / UI | Geist (variable) | 500-600 | 14px Minimum |
 | Zitate / Pull Quotes | Geist Italic | 400 | 18-24px |
 
-> Geist ist bereits im Projekt installiert (`next/font/google`). Kein weiterer Import nötig.
+> Geist ist bereits im Projekt installiert (`next/font/google`). Kein weiterer Import nÃ¶tig.
 
-#### Größen-Skala (Tailwind)
+#### GrÃ¶ÃŸen-Skala (Tailwind)
 
 ```
-text-xs    (12px) → Nie für Fließtext. Max. für Metadaten.
-text-sm    (14px) → UI-Labels, Timestamps, Badges
-text-base  (16px) → Mindest-Fließtextgröße (ABSOLUTES MINIMUM)
-text-lg    (18px) → Wichtiger Body-Text, Einleitungen
-text-xl    (20px) → Zwischen-Überschriften
-text-2xl   (24px) → Section-Überschriften
-text-3xl   (30px) → Page-Überschriften
-text-4xl   (36px) → Hero-Unter-Überschriften
-text-5xl   (48px) → Hero-Hauptüberschrift
-text-6xl   (60px) → Nur Landing Page Hero
+text-xs    (12px) â†’ Nie fÃ¼r FlieÃŸtext. Max. fÃ¼r Metadaten.
+text-sm    (14px) â†’ UI-Labels, Timestamps, Badges
+text-base  (16px) â†’ Mindest-FlieÃŸtextgrÃ¶ÃŸe (ABSOLUTES MINIMUM)
+text-lg    (18px) â†’ Wichtiger Body-Text, Einleitungen
+text-xl    (20px) â†’ Zwischen-Ãœberschriften
+text-2xl   (24px) â†’ Section-Ãœberschriften
+text-3xl   (30px) â†’ Page-Ãœberschriften
+text-4xl   (36px) â†’ Hero-Unter-Ãœberschriften
+text-5xl   (48px) â†’ Hero-HauptÃ¼berschrift
+text-6xl   (60px) â†’ Nur Landing Page Hero
 ```
 
 **Regel:** Auf mobil immer eine Stufe kleiner als auf Desktop. Beispiel: `text-5xl md:text-6xl`
@@ -266,12 +266,12 @@ text-6xl   (60px) → Nur Landing Page Hero
 
 #### Konzept
 
-Das Stammfeuer-Logo ist eine **stilisierte Flamme** aus zwei ineinander verwobenen Linien - sie symbolisieren zwei Generationen, die zusammen brennen.
+Das Ahnenecho-Logo ist eine **stilisierte Flamme** aus zwei ineinander verwobenen Linien - sie symbolisieren zwei Generationen, die zusammen brennen.
 
-#### SVG-Spezifikation (Primärlogo)
+#### SVG-Spezifikation (PrimÃ¤rlogo)
 
 ```svg
-<!-- Stammfeuer Flame Icon - Brand Asset -->
+<!-- Ahnenecho Flame Icon - Brand Asset -->
 <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Outer flame (larger, amber) -->
   <path
@@ -297,7 +297,7 @@ Das Stammfeuer-Logo ist eine **stilisierte Flamme** aus zwei ineinander verwoben
 
 | Variante | Verwendung |
 |---|---|
-| **Icon only** | Favicon, App Icon, kleine Flächen (<32px) |
+| **Icon only** | Favicon, App Icon, kleine FlÃ¤chen (<32px) |
 | **Icon + Wortmarke horizontal** | Header Navigation, E-Mail-Footer |
 | **Icon + Wortmarke vertikal** | Hero-Bereiche, Splash Screens |
 | **Wortmarke only** | Kontexte wo Icon bereits bekannt |
@@ -316,13 +316,13 @@ Das Stammfeuer-Logo ist eine **stilisierte Flamme** aus zwei ineinander verwoben
 
 **Icon-Library:** `lucide-react` (bereits spezifiziert)
 
-**Stroke-Breite:** `strokeWidth={1.5}` - dünner als Standard, wirkt eleganter
+**Stroke-Breite:** `strokeWidth={1.5}` - dÃ¼nner als Standard, wirkt eleganter
 
-**Größen:**
+**GrÃ¶ÃŸen:**
 - Navigation: 20px (`size={20}`)
 - Inline im Text: 16px (`size={16}`)
-- Feature-Icons (groß): 32px (`size={32}`)
-- Hero-Icons (sehr groß): 48px (`size={48}`)
+- Feature-Icons (groÃŸ): 32px (`size={32}`)
+- Hero-Icons (sehr groÃŸ): 48px (`size={48}`)
 
 #### Kategorie-Icons (Mapping)
 
@@ -341,10 +341,10 @@ Das Stammfeuer-Logo ist eine **stilisierte Flamme** aus zwei ineinander verwoben
 
 #### Prinzip: "Breathing Room for Older Eyes"
 
-- **Mindest-Zeilenhöhe:** `leading-relaxed` (1.625) für Fließtext
+- **Mindest-ZeilenhÃ¶he:** `leading-relaxed` (1.625) fÃ¼r FlieÃŸtext
 - **Mindest-Padding auf Cards:** `p-6` (24px) auf Desktop, `p-4` (16px) auf Mobile
 - **Mindest-Abstand zwischen Sections:** `py-16` auf Desktop, `py-10` auf Mobile
-- **Max-Breite Content:** `max-w-2xl` (Fließtext), `max-w-4xl` (Cards/Grids), `max-w-7xl` (Hero)
+- **Max-Breite Content:** `max-w-2xl` (FlieÃŸtext), `max-w-4xl` (Cards/Grids), `max-w-7xl` (Hero)
 
 #### Grid-System
 
@@ -425,12 +425,12 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 |---|---|---|
 | Button Hover | `transition-colors duration-150` | 150ms |
 | Card Hover | `transition-shadow duration-200` | 200ms |
-| Modal Einblenden | `opacity-0 → opacity-100 + scale-95 → scale-100` | 200ms |
-| Toast/Notification | `translate-y-2 → translate-y-0 + opacity` | 300ms |
+| Modal Einblenden | `opacity-0 â†’ opacity-100 + scale-95 â†’ scale-100` | 200ms |
+| Toast/Notification | `translate-y-2 â†’ translate-y-0 + opacity` | 300ms |
 | Page Transitions | Next.js default | - |
 | Flamme (Hero) | Subtiles Pulsieren via `animate-pulse` oder CSS keyframes | 3s loop |
 
-**Für ältere Nutzer:** `prefers-reduced-motion` beachten. Alle Animationen hinter:
+**FÃ¼r Ã¤ltere Nutzer:** `prefers-reduced-motion` beachten. Alle Animationen hinter:
 ```css
 @media (prefers-reduced-motion: no-preference) { ... }
 ```
@@ -439,18 +439,18 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 
 ### 4.8 Bildsprache und Visuelle Metaphern
 
-**Fotografiestil (für Marketing-Materialien):**
+**Fotografiestil (fÃ¼r Marketing-Materialien):**
 - Warme, goldene Stunde Beleuchtung
-- Authentische Familienmomente (keine Stock-Fotos mit zu breitem Lächeln)
-- Generationenübergreifend: Großeltern + Enkel zusammen
-- Hands-on: Kochende Hände, aufgeschlagene Bücher, Fotos in Händen
-- Nie: Büro-Setting, Business-Kontext, kaltes Blaulicht
+- Authentische Familienmomente (keine Stock-Fotos mit zu breitem LÃ¤cheln)
+- GenerationenÃ¼bergreifend: GroÃŸeltern + Enkel zusammen
+- Hands-on: Kochende HÃ¤nde, aufgeschlagene BÃ¼cher, Fotos in HÃ¤nden
+- Nie: BÃ¼ro-Setting, Business-Kontext, kaltes Blaulicht
 
 **Illustrationen / Grafiken:**
-- Linie-Illustrationen in Amber-Tönen
+- Linie-Illustrationen in Amber-TÃ¶nen
 - Warme, organische Formen (keine scharfen geometrischen Elemente)
 - Flammen- und Feuer-Motive dezent einsetzen
-- Familienstammbaum als visuelle Metapher für Vaults
+- Familienstammbaum als visuelle Metapher fÃ¼r Vaults
 
 ---
 
@@ -461,7 +461,7 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 **Ziel:** 100 registrierte Familien, Product-Market-Fit validieren
 
 **Aktionen:**
-- Beta-Zugang über Warteliste (E-Mail-Sammlung)
+- Beta-Zugang Ã¼ber Warteliste (E-Mail-Sammlung)
 - Direktansprache in deutschen Facebook-Gruppen zu Familie, Ahnenforschung, Rezepte
 - Kooperation mit 3-5 Micro-Influencern (Familien-/Senior-Kontext, 5.000-50.000 Follower)
 - PR: Ein Artikel in einer regionalen deutschen Zeitung ("Startup bewahrt Familiengeschichten")
@@ -479,7 +479,7 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 - SEO: Organische Inhalte (Blogposts zu "Familiengeschichte bewahren", "Omas Rezepte digitalisieren")
 - Pinterest: Rezept-Karten und Familien-Tipps (sehr hohe Reichweite bei Zielgruppe 35-55)
 - YouTube: Kurzvideos "Wie ich Omas 50 Jahre alte Rezepte gerettet habe" (authentisch, kein Hochglanz)
-- Newsletter: Wöchentliche Prompt-E-Mail ("Diese Woche: Fragt eure Eltern nach...")
+- Newsletter: WÃ¶chentliche Prompt-E-Mail ("Diese Woche: Fragt eure Eltern nach...")
 - Referral-System: "Lade deine Familie ein - beide bekommen 1 Monat Pro gratis"
 
 **KPIs:** MoM Wachstum, Free-to-Pro-Conversion, Churn Rate, WAU
@@ -493,50 +493,50 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 **Aktionen:**
 - Bezahlte Social Ads (Facebook/Instagram) - demographisch auf 35-65, Interessen: Familie, Kinder, Kochen, Ahnenforschung
 - B2B-Pilot: Kirchengemeinden, Kulturvereine, Schulen (Familiengeschichte-Projekte)
-- Presse: Tech-Medien (t3n, Gründerszene) + überregionale Presse (SPIEGEL, ZEIT)
+- Presse: Tech-Medien (t3n, GrÃ¼nderszene) + Ã¼berregionale Presse (SPIEGEL, ZEIT)
 - App Store Optimierung (wenn mobile App entwickelt wird)
-- Partnership: ADAC, Volksbanken (Zielgruppe Überschneidung)
+- Partnership: ADAC, Volksbanken (Zielgruppe Ãœberschneidung)
 
 ---
 
-## 6. Content-Marketing und Kanäle
+## 6. Content-Marketing und KanÃ¤le
 
-### Content-Säulen
+### Content-SÃ¤ulen
 
-**Säule 1: "Was wir verlieren" (Emotionaler Aufruf)**
-- "10 Fragen, die du deinen Großeltern stellen solltest - bevor es zu spät ist"
-- "Das Rezept meiner Oma - und warum ich es fast für immer verloren hätte"
+**SÃ¤ule 1: "Was wir verlieren" (Emotionaler Aufruf)**
+- "10 Fragen, die du deinen GroÃŸeltern stellen solltest - bevor es zu spÃ¤t ist"
+- "Das Rezept meiner Oma - und warum ich es fast fÃ¼r immer verloren hÃ¤tte"
 - "Oral History: Was mit Familiengeschichten passiert, wenn sie nicht aufgeschrieben werden"
 
-**Säule 2: "Wie wir bewahren" (Praktische Anleitungen)**
+**SÃ¤ule 2: "Wie wir bewahren" (Praktische Anleitungen)**
 - "5 Wege, Familienrezepte zu digitalisieren"
-- "Wie du ein Familien-Interview mit deinen Großeltern führst"
-- "Spracheingabe für Ältere: So nutzt du Stammfeuer ohne viel Tippen"
+- "Wie du ein Familien-Interview mit deinen GroÃŸeltern fÃ¼hrst"
+- "Spracheingabe fÃ¼r Ã„ltere: So nutzt du Ahnenecho ohne viel Tippen"
 
-**Säule 3: "Stammfeuer Stories" (Social Proof)**
-- Anonymisierte Nutzergeschichten ("Wie Familie Müller Opas Kriegserinnerungen bewahrte")
+**SÃ¤ule 3: "Ahnenecho Stories" (Social Proof)**
+- Anonymisierte Nutzergeschichten ("Wie Familie MÃ¼ller Opas Kriegserinnerungen bewahrte")
 - Bevor/Nachher: "Unstrukturiertes WhatsApp-Chaos vs. strukturiertes Familienarchiv"
-- Prompt-der-Woche: Wöchentliche Frage, die Follower mit ihrer Familie teilen
+- Prompt-der-Woche: WÃ¶chentliche Frage, die Follower mit ihrer Familie teilen
 
-**Säule 4: "Für Ältere" (Barrierefreiheit und Vertrauen)**
-- "Stammfeuer erklärt: So nutzen auch 70-Jährige die App problemlos"
-- Video-Tutorials mit großem Cursor, langsamer Sprache
+**SÃ¤ule 4: "FÃ¼r Ã„ltere" (Barrierefreiheit und Vertrauen)**
+- "Ahnenecho erklÃ¤rt: So nutzen auch 70-JÃ¤hrige die App problemlos"
+- Video-Tutorials mit groÃŸem Cursor, langsamer Sprache
 - Datenschutz-FAQ: "Wo sind meine Daten? Wer hat Zugriff?"
 
 ---
 
 ### Kanal-Matrix
 
-| Kanal | Priorität | Zielgruppe | Content-Format |
+| Kanal | PrioritÃ¤t | Zielgruppe | Content-Format |
 |---|---|---|---|
 | **Organic SEO** | Hoch | 35-55, sucht aktiv | Blogposts, How-to, Long-form |
 | **Pinterest** | Hoch | 35-60, Frauen | Rezept-Karten, Infografiken, Zitate |
 | **Instagram** | Mittel | 28-45 | Reels, Stories, Zitat-Cards |
 | **Facebook** | Mittel | 45-65 | Gruppen, Text-Posts, Videos |
 | **YouTube** | Mittel | 40-70 | Tutorials, Story-Videos |
-| **E-Mail Newsletter** | Hoch | Alle registrierten | Wöchentliche Prompts, Updates |
+| **E-Mail Newsletter** | Hoch | Alle registrierten | WÃ¶chentliche Prompts, Updates |
 | **PR** | Mittel | Breit | Pressemitteilungen, Interviews |
-| **TikTok** | Niedrig | Unter 35 (Sekundär) | Kurzvideos "Oma erklärt" |
+| **TikTok** | Niedrig | Unter 35 (SekundÃ¤r) | Kurzvideos "Oma erklÃ¤rt" |
 
 ---
 
@@ -544,28 +544,28 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 
 ### Preisarchitektur
 
-| Plan | Preis | Monatlich | Jährlich | Positionierung |
+| Plan | Preis | Monatlich | JÃ¤hrlich | Positionierung |
 |---|---|---|---|---|
-| **Kostenlos** | €0 | - | - | "Legt los, ohne Kreditkarte" |
-| **Pro** | €9,90/Monat | oder €79/Jahr | (33% Ersparnis) | "Für engagierte Familien" |
-| **Familie+** | €14,90/Monat | oder €119/Jahr | (33% Ersparnis) | "Für große Familien" |
+| **Kostenlos** | â‚¬0 | - | - | "Legt los, ohne Kreditkarte" |
+| **Pro** | â‚¬9,90/Monat | oder â‚¬79/Jahr | (33% Ersparnis) | "FÃ¼r engagierte Familien" |
+| **Familie+** | â‚¬14,90/Monat | oder â‚¬119/Jahr | (33% Ersparnis) | "FÃ¼r groÃŸe Familien" |
 
 ### Pricing-Messaging
 
 **Free:**
-> "Kostenlos starten. Für immer. 5 Familienmitglieder, 20 Einträge - genug, um anzufangen."
+> "Kostenlos starten. FÃ¼r immer. 5 Familienmitglieder, 20 EintrÃ¤ge - genug, um anzufangen."
 
 **Pro:**
-> "Weniger als ein Kaffee im Monat. Unbegrenzte Einträge, unbegrenzte Mitglieder, KI-Prompts, Export. Für Familien, die es ernst meinen."
+> "Weniger als ein Kaffee im Monat. Unbegrenzte EintrÃ¤ge, unbegrenzte Mitglieder, KI-Prompts, Export. FÃ¼r Familien, die es ernst meinen."
 
 **Familie+:**
-> "Für große Familien und mehrere Vault-Gruppen. Prioritäts-Support und früher Zugang zu neuen Features."
+> "FÃ¼r groÃŸe Familien und mehrere Vault-Gruppen. PrioritÃ¤ts-Support und frÃ¼her Zugang zu neuen Features."
 
 ### Value Anchoring
 
-- Vergleich: "Ein Kaffee kostet €3,50. Pro kostet €9,90 - für das Erbe eurer ganzen Familie."
-- Vergleich: "Ein Fotoalbum-Druck kostet €40-80. Stammfeuer Pro ist €79 für ein ganzes Jahr."
-- Emotion: "Was wäre es euch wert, Omas Rezept in 20 Jahren noch lesen zu können?"
+- Vergleich: "Ein Kaffee kostet â‚¬3,50. Pro kostet â‚¬9,90 - fÃ¼r das Erbe eurer ganzen Familie."
+- Vergleich: "Ein Fotoalbum-Druck kostet â‚¬40-80. Ahnenecho Pro ist â‚¬79 fÃ¼r ein ganzes Jahr."
+- Emotion: "Was wÃ¤re es euch wert, Omas Rezept in 20 Jahren noch lesen zu kÃ¶nnen?"
 
 ### Upgrade-Trigger in der App
 
@@ -579,25 +579,25 @@ z.B. Geschichten: bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amb
 
 ### Viraler Loop
 
-Stammfeuer ist inhärent viral durch den Einladungs-Mechanismus:
+Ahnenecho ist inhÃ¤rent viral durch den Einladungs-Mechanismus:
 1. User A registriert sich und erstellt einen Vault
-2. User A lädt Familie (5-15 Personen) ein
-3. Jede Einladungs-E-Mail enthält Stammfeuer-Branding
+2. User A lÃ¤dt Familie (5-15 Personen) ein
+3. Jede Einladungs-E-Mail enthÃ¤lt Ahnenecho-Branding
 4. Eingeladene sehen die App, teilen teilweise weiter
 
 **Virality Coefficient Ziel: K > 1.2** (Jeder neue Nutzer bringt >1.2 weitere)
 
 ### Retention-Mechaniken
 
-- **Wöchentliche Prompts:** Aktive E-Mail / Push - erinnert an die App
-- **"Diesen Monat fehlt noch:"** Dashboard-Widget mit Kategorie-Lücken
+- **WÃ¶chentliche Prompts:** Aktive E-Mail / Push - erinnert an die App
+- **"Diesen Monat fehlt noch:"** Dashboard-Widget mit Kategorie-LÃ¼cken
 - **Geburtstag-Erinnerung:** "Heute hat [Familienmitglied] Geburtstag - schreib ihm eine Erinnerung"
-- **Jahresrückblick:** Automatisch generierte Zusammenfassung jedes Jahr (wie Spotify Wrapped)
+- **JahresrÃ¼ckblick:** Automatisch generierte Zusammenfassung jedes Jahr (wie Spotify Wrapped)
 
 ### Referral-Programm
 
 - "Lade deine Familie ein und erhalte 1 Monat Pro gratis"
-- Jede erfolgreiche Einladung, die zur Registrierung führt: +2 Wochen Pro
+- Jede erfolgreiche Einladung, die zur Registrierung fÃ¼hrt: +2 Wochen Pro
 - Keine komplexe Mechanik - einfach und transparent
 
 ---
@@ -606,13 +606,14 @@ Stammfeuer ist inhärent viral durch den Einladungs-Mechanismus:
 
 Verwende diese Checkliste bei jedem neuen UI-Element oder Marketing-Material:
 
-- [ ] Farbe: Nur Warm-Töne. Kein Blau, Lila oder Kaltgrau als Akzent.
+- [ ] Farbe: Nur Warm-TÃ¶ne. Kein Blau, Lila oder Kaltgrau als Akzent.
 - [ ] Schrift: Body-Text minimum 16px.
-- [ ] Touch-Targets: Alle Buttons/Links minimum 44×44px.
-- [ ] Sprache: Warm, persönlich, nie technisch. Keine Buzzwords.
-- [ ] Strings: Alle UI-Texte über `useTranslations`, nie hart kodiert.
+- [ ] Touch-Targets: Alle Buttons/Links minimum 44Ã—44px.
+- [ ] Sprache: Warm, persÃ¶nlich, nie technisch. Keine Buzzwords.
+- [ ] Strings: Alle UI-Texte Ã¼ber `useTranslations`, nie hart kodiert.
 - [ ] Dark Mode: Jedes neue Element auf beiden Themes getestet.
 - [ ] Barrierefreiheit: Alt-Text, ARIA-Labels, Keyboard-Navigation.
-- [ ] Em-Dash (—): Niemals verwenden. Stattdessen Komma oder Satz trennen.
+- [ ] Em-Dash (â€”): Niemals verwenden. Stattdessen Komma oder Satz trennen.
 - [ ] Animation: `prefers-reduced-motion` respektiert.
-- [ ] Kontrast: WCAG AA (4.5:1 für Fließtext, 3:1 für große Schrift).
+- [ ] Kontrast: WCAG AA (4.5:1 fÃ¼r FlieÃŸtext, 3:1 fÃ¼r groÃŸe Schrift).
+

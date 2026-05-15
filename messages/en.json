@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "vault": "Family Vault",
+    "entries": "Entries",
+    "members": "Members",
+    "prompts": "Prompts",
+    "settings": "Settings",
+    "pricing": "Pricing",
+    "help": "Help",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "register": "Create account"
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to access your family vault",
+    "registerTitle": "Create an account",
+    "registerSubtitle": "Start your family's memory archive",
+    "email": "Email address",
+    "password": "Password",
+    "fullName": "Full name",
+    "loginButton": "Sign in",
+    "registerButton": "Create account",
+    "magicLinkButton": "Send magic link",
+    "forgotPassword": "Forgot your password?",
+    "resetPasswordTitle": "Reset password",
+    "resetPasswordSubtitle": "We will send you a reset link.",
+    "resetButton": "Send link",
+    "noAccount": "No account yet?",
+    "hasAccount": "Already have an account?",
+    "errors": {
+      "invalidCredentials": "Invalid email or password.",
+      "emailNotConfirmed": "Please confirm your email address first.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "success": {
+      "magicLinkSent": "We sent you a sign-in link. Check your inbox.",
+      "resetLinkSent": "Reset link has been sent.",
+      "registered": "Account created! Please confirm your email address."
+    }
+  },
+  "vault": {
+    "create": "Create new vault",
+    "createTitle": "Start your family's memory",
+    "name": "Vault name",
+    "namePlaceholder": "e.g. Miller Family",
+    "description": "Description",
+    "descriptionPlaceholder": "What is this vault about? What should be preserved?",
+    "coverImage": "Cover image (optional)",
+    "createButton": "Create vault",
+    "overview": "Vault overview",
+    "members": "Members",
+    "lastEntry": "Last entry",
+    "totalEntries": "Entries",
+    "noVault": "You don't have a family vault yet.",
+    "createFirst": "Create your first vault now.",
+    "errors": {
+      "nameTooShort": "Name must be at least 3 characters.",
+      "createFailed": "Could not create vault."
+    }
+  },
+  "members": {
+    "invite": "Invite member",
+    "inviteEmail": "Email address",
+    "inviteRole": "Role",
+    "inviteFamilyRole": "Family relationship",
+    "inviteFamilyRolePlaceholder": "e.g. Grandma, Uncle, Daughter",
+    "inviteButton": "Send invitation",
+    "roles": {
+      "initiator": "Initiator (Admin)",
+      "contributor": "Contributor",
+      "reader": "Read only"
+    },
+    "rolesDescription": {
+      "initiator": "Can manage members and edit all entries",
+      "contributor": "Can create entries and edit their own",
+      "reader": "Can only read entries"
+    },
+    "removeConfirm": "Really remove this member?",
+    "removeButton": "Remove",
+    "inviteLink": "Invitation link",
+    "copyLink": "Copy link",
+    "linkCopied": "Copied!",
+    "inviteCode": "Invitation code",
+    "pendingInvite": "Invitation pending",
+    "errors": {
+      "inviteFailed": "Could not send invitation.",
+      "alreadyMember": "This person is already a member."
+    },
+    "success": {
+      "invited": "Invitation sent.",
+      "removed": "Member removed.",
+      "roleUpdated": "Role updated."
+    }
+  },
+  "categories": {
+    "stories": "Stories",
+    "recipes": "Recipes",
+    "traditions": "Traditions",
+    "wisdom": "Wisdom",
+    "places": "Places",
+    "photos": "Photos"
+  },
+  "entries": {
+    "new": "New entry",
+    "title": "Title",
+    "titlePlaceholder": "Give this entry a meaningful title",
+    "body": "Content",
+    "bodyPlaceholder": "Tell your story...",
+    "category": "Category",
+    "language": "Language",
+    "addPhoto": "Add photo",
+    "photoDescription": "Description (required)",
+    "photoDescriptionPlaceholder": "Who is in the photo? What is shown?",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "deleteConfirm": "Really delete this entry?",
+    "translationTab": "Translation",
+    "originalTab": "Original",
+    "translationComingSoon": "AI translation coming in version 2.",
+    "voiceInput": "Voice input",
+    "voiceStart": "Start recording",
+    "voiceStop": "Stop recording",
+    "voiceTranscribing": "Transcribing...",
+    "voiceEditBefore": "You can edit the transcript below before saving.",
+    "voiceUnsupported": "Your browser does not support voice input.",
+    "errors": {
+      "titleRequired": "Title is required.",
+      "photoDescriptionRequired": "Description is required for photos.",
+      "saveFailed": "Could not save entry.",
+      "deleteFailed": "Could not delete entry."
+    }
+  },
+  "prompts": {
+    "thisWeek": "Question of the week",
+    "answerNow": "Answer now",
+    "skip": "Skip",
+    "noPrompt": "No active question.",
+    "browse": "Browse more questions",
+    "categories": {
+      "stories": "Stories",
+      "recipes": "Recipes",
+      "traditions": "Traditions",
+      "wisdom": "Wisdom",
+      "places": "Places",
+      "photos": "Photos"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "health": "Vault health",
+    "healthDescription": "How complete is your family's memory archive?",
+    "recentEntries": "Recent entries",
+    "inactiveMembers": "Never contributed",
+    "inactiveMembersHint": "These members have not created an entry yet.",
+    "timelineGaps": "Timeline gaps",
+    "timelineGapsHint": "No stories exist for these years yet.",
+    "score": "Completeness",
+    "noEntries": "No entries in the vault yet."
+  },
+  "freemium": {
+    "limitReached": "Limit reached",
+    "memberLimit": "The free plan allows a maximum of 5 members.",
+    "entryLimit": "The free plan allows a maximum of 20 entries.",
+    "upgradeNow": "Upgrade now",
+    "upgradeDescription": "With Pro you get unlimited members, unlimited entries and AI prompts."
+  },
+  "pricing": {
+    "title": "Choose your plan",
+    "subtitle": "Your family's fire, burning forever.",
+    "free": {
+      "name": "Free",
+      "price": "€0",
+      "period": "",
+      "features": [
+        "1 family vault",
+        "Up to 5 members",
+        "Up to 20 entries",
+        "All 6 categories",
+        "Voice input"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "€9.90",
+      "period": "/ month",
+      "yearlyPrice": "€79 / year (save 33%)",
+      "features": [
+        "Unlimited members",
+        "Unlimited entries",
+        "Weekly AI prompts",
+        "Vault health dashboard",
+        "Priority support"
+      ]
+    },
+    "familyPlus": {
+      "name": "Family+",
+      "price": "€14.90",
+      "period": "/ month",
+      "features": [
+        "Everything in Pro",
+        "Yearbook PDF export",
+        "Advanced AI analysis",
+        "Multilingual (AI translation)",
+        "Exclusive family support"
+      ]
+    },
+    "ctaComingSoon": "Payment coming soon"
+  },
+  "profile": {
+    "title": "My profile",
+    "fullName": "Full name",
+    "birthYear": "Birth year",
+    "familyRole": "Role in the family",
+    "familyRolePlaceholder": "e.g. Grandma, Dad, Granddaughter",
+    "bio": "About me",
+    "bioPlaceholder": "Tell us something about you...",
+    "avatar": "Profile photo",
+    "changeAvatar": "Change photo",
+    "save": "Save",
+    "success": "Profile saved."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "notifications": "Notifications",
+    "notificationsEmail": "Email on new entries",
+    "notificationsPrompt": "Email on new weekly prompt",
+    "dangerZone": "Danger zone",
+    "exportData": "Export all data (ZIP)",
+    "deleteAccount": "Delete account",
+    "deleteAccountConfirm": "Really delete your account? All data will be permanently deleted.",
+    "deleteAccountButton": "Permanently delete account"
+  },
+  "legal": {
+    "impressum": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "cookies": "Cookies"
+  },
+  "cookie": {
+    "message": "We use technically necessary cookies to operate the app. No tracking or advertising cookies are set.",
+    "accept": "Got it",
+    "learnMore": "Learn more"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist.",
+    "unauthorized": "Unauthorized",
+    "unauthorizedDescription": "You do not have permission to view this page.",
+    "serverError": "Server error",
+    "serverErrorDescription": "Something went wrong. Please try again later.",
+    "backHome": "Back to home"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "search": "Search",
+    "filter": "Filter",
+    "noResults": "No results found.",
+    "by": "by",
+    "on": "on",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "optional",
+    "required": "required"
+  }
+}

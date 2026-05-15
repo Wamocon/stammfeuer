@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "dashboard": "Dashboard",
+    "vault": "Familien-Vault",
+    "entries": "Einträge",
+    "members": "Mitglieder",
+    "prompts": "Fragen",
+    "settings": "Einstellungen",
+    "pricing": "Preise",
+    "help": "Hilfe",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "register": "Registrieren"
+  },
+  "auth": {
+    "loginTitle": "Willkommen zurück",
+    "loginSubtitle": "Melde dich an, um auf deinen Familien-Vault zuzugreifen",
+    "registerTitle": "Konto erstellen",
+    "registerSubtitle": "Starte das Gedächtnis deiner Familie",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "fullName": "Vollständiger Name",
+    "loginButton": "Anmelden",
+    "registerButton": "Konto erstellen",
+    "magicLinkButton": "Magic Link senden",
+    "forgotPassword": "Passwort vergessen?",
+    "resetPasswordTitle": "Passwort zurücksetzen",
+    "resetPasswordSubtitle": "Wir senden dir einen Link zum Zurücksetzen.",
+    "resetButton": "Link senden",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?",
+    "errors": {
+      "invalidCredentials": "E-Mail oder Passwort falsch.",
+      "emailNotConfirmed": "Bitte bestätige zuerst deine E-Mail-Adresse.",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    },
+    "success": {
+      "magicLinkSent": "Wir haben dir einen Anmelde-Link gesendet. Prüfe dein Postfach.",
+      "resetLinkSent": "Link zum Zurücksetzen wurde gesendet.",
+      "registered": "Konto erstellt! Bitte bestätige deine E-Mail-Adresse."
+    }
+  },
+  "vault": {
+    "create": "Neuen Vault anlegen",
+    "createTitle": "Starte das Gedächtnis eurer Familie",
+    "name": "Name des Vaults",
+    "namePlaceholder": "z.B. Familie Müller",
+    "description": "Beschreibung",
+    "descriptionPlaceholder": "Worum geht es in diesem Vault? Was soll bewahrt werden?",
+    "coverImage": "Titelbild (optional)",
+    "createButton": "Vault erstellen",
+    "overview": "Vault-Übersicht",
+    "members": "Mitglieder",
+    "lastEntry": "Letzter Eintrag",
+    "totalEntries": "Einträge",
+    "noVault": "Du hast noch keinen Familien-Vault.",
+    "createFirst": "Lege jetzt deinen ersten Vault an.",
+    "errors": {
+      "nameTooShort": "Name muss mindestens 3 Zeichen lang sein.",
+      "createFailed": "Vault konnte nicht erstellt werden."
+    }
+  },
+  "members": {
+    "invite": "Mitglied einladen",
+    "inviteEmail": "E-Mail-Adresse",
+    "inviteRole": "Rolle",
+    "inviteFamilyRole": "Beziehung zur Familie",
+    "inviteFamilyRolePlaceholder": "z.B. Oma, Onkel, Tochter",
+    "inviteButton": "Einladung senden",
+    "roles": {
+      "initiator": "Initiator (Admin)",
+      "contributor": "Beitragend",
+      "reader": "Nur lesen"
+    },
+    "rolesDescription": {
+      "initiator": "Kann Mitglieder verwalten und alle Einträge bearbeiten",
+      "contributor": "Kann Einträge erstellen und eigene bearbeiten",
+      "reader": "Kann nur Einträge lesen"
+    },
+    "removeConfirm": "Mitglied wirklich entfernen?",
+    "removeButton": "Entfernen",
+    "inviteLink": "Einladungslink",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link kopiert!",
+    "inviteCode": "Einladungscode",
+    "pendingInvite": "Einladung ausstehend",
+    "errors": {
+      "inviteFailed": "Einladung konnte nicht gesendet werden.",
+      "alreadyMember": "Diese Person ist bereits Mitglied."
+    },
+    "success": {
+      "invited": "Einladung wurde gesendet.",
+      "removed": "Mitglied wurde entfernt.",
+      "roleUpdated": "Rolle wurde aktualisiert."
+    }
+  },
+  "categories": {
+    "stories": "Geschichten",
+    "recipes": "Rezepte",
+    "traditions": "Traditionen",
+    "wisdom": "Weisheiten",
+    "places": "Orte",
+    "photos": "Fotos"
+  },
+  "entries": {
+    "new": "Neuer Eintrag",
+    "title": "Titel",
+    "titlePlaceholder": "Gib diesem Eintrag einen aussagekräftigen Titel",
+    "body": "Inhalt",
+    "bodyPlaceholder": "Erzähle deine Geschichte...",
+    "category": "Kategorie",
+    "language": "Sprache",
+    "addPhoto": "Foto hinzufügen",
+    "photoDescription": "Beschreibung (Pflicht)",
+    "photoDescriptionPlaceholder": "Wer ist auf dem Foto? Was ist zu sehen?",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "deleteConfirm": "Eintrag wirklich löschen?",
+    "translationTab": "Übersetzung",
+    "originalTab": "Original",
+    "translationComingSoon": "KI-Übersetzung folgt in Version 2.",
+    "voiceInput": "Spracheingabe",
+    "voiceStart": "Aufnahme starten",
+    "voiceStop": "Aufnahme stoppen",
+    "voiceTranscribing": "Wird transkribiert...",
+    "voiceEditBefore": "Du kannst das Transkript unten bearbeiten, bevor du es speicherst.",
+    "voiceUnsupported": "Dein Browser unterstützt keine Spracheingabe.",
+    "errors": {
+      "titleRequired": "Titel ist Pflichtfeld.",
+      "photoDescriptionRequired": "Beschreibung ist für Fotos Pflichtfeld.",
+      "saveFailed": "Eintrag konnte nicht gespeichert werden.",
+      "deleteFailed": "Eintrag konnte nicht gelöscht werden."
+    }
+  },
+  "prompts": {
+    "thisWeek": "Frage der Woche",
+    "answerNow": "Jetzt beantworten",
+    "skip": "Überspringen",
+    "noPrompt": "Keine aktive Frage.",
+    "browse": "Weitere Fragen durchsuchen",
+    "categories": {
+      "stories": "Geschichten",
+      "recipes": "Rezepte",
+      "traditions": "Traditionen",
+      "wisdom": "Weisheiten",
+      "places": "Orte",
+      "photos": "Fotos"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "health": "Vault-Gesundheit",
+    "healthDescription": "Wie vollständig ist das Gedächtnis eurer Familie?",
+    "recentEntries": "Letzte Einträge",
+    "inactiveMembers": "Noch nie beigetragen",
+    "inactiveMembersHint": "Diese Mitglieder haben noch keinen Eintrag erstellt.",
+    "timelineGaps": "Zeiträume ohne Einträge",
+    "timelineGapsHint": "Für diese Jahre gibt es noch keine Geschichten.",
+    "score": "Vollständigkeit",
+    "noEntries": "Noch keine Einträge im Vault."
+  },
+  "freemium": {
+    "limitReached": "Limit erreicht",
+    "memberLimit": "Im kostenlosen Plan sind maximal 5 Mitglieder erlaubt.",
+    "entryLimit": "Im kostenlosen Plan sind maximal 20 Einträge erlaubt.",
+    "upgradeNow": "Jetzt upgraden",
+    "upgradeDescription": "Mit Pro hast du unbegrenzte Mitglieder, unbegrenzte Einträge und KI-Prompts."
+  },
+  "pricing": {
+    "title": "Wähle deinen Plan",
+    "subtitle": "Das Feuer deiner Familie, für immer am Brennen.",
+    "free": {
+      "name": "Kostenlos",
+      "price": "0 €",
+      "period": "",
+      "features": [
+        "1 Familien-Vault",
+        "Bis zu 5 Mitglieder",
+        "Bis zu 20 Einträge",
+        "Alle 6 Kategorien",
+        "Spracheingabe"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "9,90 €",
+      "period": "/ Monat",
+      "yearlyPrice": "79 € / Jahr (33% sparen)",
+      "features": [
+        "Unbegrenzte Mitglieder",
+        "Unbegrenzte Einträge",
+        "Wöchentliche KI-Prompts",
+        "Vault-Gesundheits-Dashboard",
+        "Prioritäts-Support"
+      ]
+    },
+    "familyPlus": {
+      "name": "Familie+",
+      "price": "14,90 €",
+      "period": "/ Monat",
+      "features": [
+        "Alles aus Pro",
+        "Jahrbuch-PDF Export",
+        "Erweiterte KI-Analyse",
+        "Mehrsprachigkeit (KI-Übersetzung)",
+        "Exklusiver Familien-Support"
+      ]
+    },
+    "ctaComingSoon": "Zahlung folgt in Kürze"
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "fullName": "Vollständiger Name",
+    "birthYear": "Geburtsjahr",
+    "familyRole": "Rolle in der Familie",
+    "familyRolePlaceholder": "z.B. Oma, Vater, Enkelin",
+    "bio": "Über mich",
+    "bioPlaceholder": "Erzähle etwas über dich...",
+    "avatar": "Profilfoto",
+    "changeAvatar": "Foto ändern",
+    "save": "Speichern",
+    "success": "Profil gespeichert."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "language": "Sprache",
+    "theme": "Design",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "themeSystem": "Systemeinstellung",
+    "notifications": "Benachrichtigungen",
+    "notificationsEmail": "E-Mail bei neuen Einträgen",
+    "notificationsPrompt": "E-Mail bei neuer Wochenfrage",
+    "dangerZone": "Gefahrenzone",
+    "exportData": "Alle Daten exportieren (ZIP)",
+    "deleteAccount": "Konto löschen",
+    "deleteAccountConfirm": "Konto wirklich löschen? Alle Daten werden unwiderruflich gelöscht.",
+    "deleteAccountButton": "Konto endgültig löschen"
+  },
+  "legal": {
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "cookies": "Cookies"
+  },
+  "cookie": {
+    "message": "Wir verwenden technisch notwendige Cookies, um die App zu betreiben. Es werden keine Tracking- oder Werbe-Cookies gesetzt.",
+    "accept": "Verstanden",
+    "learnMore": "Mehr erfahren"
+  },
+  "errors": {
+    "notFound": "Seite nicht gefunden",
+    "notFoundDescription": "Die gesuchte Seite existiert nicht.",
+    "unauthorized": "Nicht autorisiert",
+    "unauthorizedDescription": "Du hast keine Berechtigung für diese Seite.",
+    "serverError": "Serverfehler",
+    "serverErrorDescription": "Etwas ist schiefgelaufen. Bitte versuche es später erneut.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "common": {
+    "loading": "Laden...",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "by": "von",
+    "on": "am",
+    "yes": "Ja",
+    "no": "Nein",
+    "optional": "optional",
+    "required": "Pflichtfeld"
+  }
+}

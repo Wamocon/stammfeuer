@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 
-const STORAGE_KEY = 'stammfeuer_cookie_accepted'
+const STORAGE_KEY = 'ahnenecho_cookie_accepted'
 
 export function CookieBanner() {
   const t = useTranslations('cookie')

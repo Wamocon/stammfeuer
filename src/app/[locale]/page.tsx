@@ -45,8 +45,8 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
             {locale === 'de'
-              ? 'Das Feuer deiner Familie, für immer am Brennen.'
-              : "Your family's fire, burning forever."}
+              ? 'Das Echo deiner Ahnen, für immer lebendig.'
+              : "Your ancestors' echo, alive forever."}
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
             {locale === 'de'
@@ -104,7 +104,7 @@ export default async function HomePage({ params }: HomePageProps) {
             6 Kategorien für das komplette Familiengedächtnis
           </h2>
           <p className="text-lg leading-relaxed text-gray-600 dark:text-stone-400 text-center mb-12 max-w-2xl mx-auto">
-            Jede Familie ist einzigartig. Stammfeuer bewahrt jede Art von Erinnerung.
+            Jede Familie ist einzigartig. Ahnenecho bewahrt jede Art von Erinnerung.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {CATEGORIES.map(({ slug, desc }) => (
@@ -150,9 +150,9 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="py-16 md:py-24 bg-gradient-to-r from-amber-600 to-orange-500 px-4 text-white text-center">
         <div className="max-w-3xl mx-auto">
           <p className="text-3xl md:text-4xl font-bold italic leading-relaxed mb-4">
-            &ldquo;Das Feuer deiner Familie, für immer am Brennen.&rdquo;
+            &ldquo;Das Echo deiner Ahnen, für immer lebendig.&rdquo;
           </p>
-          <p className="text-lg text-white/80">Stammfeuer - Das generationsübergreifende Familienarchiv</p>
+          <p className="text-lg text-white/80">Ahnenecho - Das generationsübergreifende Familienarchiv</p>
         </div>
       </section>
 
@@ -221,7 +221,7 @@ export default async function HomePage({ params }: HomePageProps) {
                   </li>
                 ))}
               </ul>
-              <a href="mailto:info@stammfeuer.app" className="w-full border border-amber-600 text-amber-600 font-semibold px-4 py-3 rounded-lg text-center hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors">
+              <a href="mailto:info@ahnenecho.app" className="w-full border border-amber-600 text-amber-600 font-semibold px-4 py-3 rounded-lg text-center hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-colors">
                 Kontakt aufnehmen
               </a>
             </div>

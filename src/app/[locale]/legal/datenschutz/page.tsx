@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
             WAMOCON GmbH, Mergenthalerallee 79 - 81, 65760 Eschborn<br />
             Telefon: +49 6196 5838311<br />
             E-Mail: <a href="mailto:info@wamocon.com" className="text-amber-600 hover:underline">info@wamocon.com</a><br />
-            Projektkontakt: <a href="mailto:info@stammfeuer.app" className="text-amber-600 hover:underline">info@stammfeuer.app</a><br />
+            Projektkontakt: <a href="mailto:info@ahnenecho.app" className="text-amber-600 hover:underline">info@ahnenecho.app</a><br />
             Geschäftsführer: Dipl.-Ing. Waleri Moretz
           </p>
         </section>
@@ -26,7 +26,7 @@ export default function DatenschutzPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">2. Überblick</h2>
           <p>
-            Diese Datenschutzerklärung gilt für die Website und Webanwendung Stammfeuer (stammfeuer.app).
+            Diese Datenschutzerklärung gilt für die Website und Webanwendung Ahnenecho (ahnenecho.app).
             Wir verarbeiten personenbezogene Daten nur, soweit es zur Bereitstellung unserer Plattform notwendig ist.
           </p>
         </section>
@@ -68,7 +68,7 @@ export default function DatenschutzPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">6. Cookies</h2>
           <p>
-            Stammfeuer verwendet ausschließlich technisch notwendige Cookies für Session-Management und Authentifizierung.
+            Ahnenecho verwendet ausschließlich technisch notwendige Cookies für Session-Management und Authentifizierung.
             Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Es werden keine Tracking- oder Werbe-Cookies eingesetzt.
           </p>
         </section>
@@ -85,7 +85,7 @@ export default function DatenschutzPage() {
           </ul>
           <p className="mt-3">
             Anfragen bitte an:{' '}
-            <a href="mailto:info@stammfeuer.app" className="text-amber-600 hover:underline">info@stammfeuer.app</a>
+            <a href="mailto:info@ahnenecho.app" className="text-amber-600 hover:underline">info@ahnenecho.app</a>
           </p>
         </section>
 

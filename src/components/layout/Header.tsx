@@ -78,7 +78,7 @@ export function Header({ locale }: HeaderProps) {
             <path d="M20 24C20 24 17 27 17 30C17 31.7 18.3 33 20 33C21.7 33 23 31.7 23 30C23 27 20 24 20 24Z" fill="#fbbf24" />
           </svg>
           <span className="text-lg font-bold text-gray-900 dark:text-stone-50">
-            Stamm<span className="text-amber-600 dark:text-amber-400">feuer</span>
+            Ahnen<span className="text-amber-600 dark:text-amber-400">echo</span>
           </span>
         </Link>
 

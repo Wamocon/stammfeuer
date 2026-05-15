@@ -53,7 +53,7 @@ export default function LoginForm({ locale }: { locale: string }) {
             <path d="M20 16C20 16 14 22 14 28C14 31.9 16.7 35 20 35C23.3 35 26 31.9 26 28C26 22 20 16 20 16Z" fill="#b91c1c" opacity="0.85" />
             <path d="M20 24C20 24 17 27 17 30C17 31.7 18.3 33 20 33C21.7 33 23 31.7 23 30C23 27 20 24 20 24Z" fill="#fbbf24" />
           </svg>
-          <h1 className="text-3xl font-bold mb-3">Stammfeuer</h1>
+          <h1 className="text-3xl font-bold mb-3">Ahnenecho</h1>
           <p className="text-lg text-white/90 leading-relaxed">
             Das Feuer deiner Familie, für immer am Brennen.
           </p>

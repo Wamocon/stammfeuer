@@ -26,7 +26,7 @@ export default function ImpressumPage() {
           <p className="text-gray-700 dark:text-stone-300">
             Telefon: +49 6196 5838311<br />
             E-Mail: <a href="mailto:info@wamocon.com" className="text-amber-600 hover:underline">info@wamocon.com</a><br />
-            Projektkontakt: <a href="mailto:info@stammfeuer.app" className="text-amber-600 hover:underline">info@stammfeuer.app</a>
+            Projektkontakt: <a href="mailto:info@ahnenecho.app" className="text-amber-600 hover:underline">info@ahnenecho.app</a>
           </p>
         </section>
 
@@ -47,7 +47,7 @@ export default function ImpressumPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">Angaben zum Angebot</h2>
           <p className="text-gray-700 dark:text-stone-300">
-            Stammfeuer ist eine webbasierte Software-as-a-Service-Plattform für die generationsübergreifende
+            Ahnenecho ist eine webbasierte Software-as-a-Service-Plattform für die generationsübergreifende
             Archivierung von Familiengeschichten, Rezepten, Traditionen und Weisheiten. Das Angebot richtet
             sich an Familien und Privatpersonen.
           </p>

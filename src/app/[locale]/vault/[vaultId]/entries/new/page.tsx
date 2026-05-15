@@ -37,7 +37,7 @@ export default async function NewEntryPage({ params, searchParams }: NewEntryPag
           { label: t('new') },
         ]}
       />
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">{t('new')}</h1>
+      <h1 className="text-3xl font-bold text-foreground">{t('new')}</h1>
       <EntryForm
         vaultId={vaultId}
         locale={locale}

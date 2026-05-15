@@ -10,7 +10,7 @@ interface BadgeProps {
 }
 
 const variantClasses: Record<string, string> = {
-  default: 'bg-gray-100 text-gray-700 dark:bg-stone-700 dark:text-stone-200',
+  default: 'bg-gray-100 text-gray-700 dark:bg-muted dark:text-muted-foreground',
   stories: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
   recipes: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
   traditions: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300',

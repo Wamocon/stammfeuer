@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -111,12 +111,12 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
 
       {/* Body - Tabs */}
       <div>
-        <div className="flex gap-1 mb-2 border-b border-[var(--color-border)] dark:border-stone-700">
+        <div className="flex gap-1 mb-2 border-b border-border">
           <button
             className={`px-4 py-2 text-sm font-medium -mb-px border-b-2 transition-colors ${
               activeTab === 'original'
                 ? 'border-amber-600 text-amber-600 dark:text-amber-400'
-                : 'border-transparent text-gray-500 dark:text-stone-400'
+                : 'border-transparent text-muted-foreground'
             }`}
             onClick={() => setActiveTab('original')}
           >
@@ -126,7 +126,7 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
             className={`px-4 py-2 text-sm font-medium -mb-px border-b-2 transition-colors ${
               activeTab === 'translation'
                 ? 'border-amber-600 text-amber-600 dark:text-amber-400'
-                : 'border-transparent text-gray-500 dark:text-stone-400'
+                : 'border-transparent text-muted-foreground'
             }`}
             onClick={() => setActiveTab('translation')}
           >

@@ -3,8 +3,7 @@
 // POST /api/vaults - create a new vault
 
 import { NextResponse } from 'next/server'
-import { createSupabaseServerClient } from '@/lib/supabase/server'
-import { PLAN_LIMITS } from '@/types/database'
+import { createSupabaseServerClient, createSupabaseServiceClient } from '@/lib/supabase/server'
 
 export async function GET() {
   const supabase = await createSupabaseServerClient()
@@ -48,16 +47,28 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Vault name must be at least 3 characters.' }, { status: 400 })
   }
 
-  const { data, error } = await supabase
+  // Use service role to bypass RLS - the vault_members INSERT policy blocks
+  // the handle_vault_created trigger because the owner is not yet a member
+  // when the trigger fires. Service role bypasses RLS entirely.
+  const service = createSupabaseServiceClient()
+
+  // Ensure profile exists (in case handle_new_user trigger didn't fire)
+  await service
+    .from('profiles')
+    .upsert({
+      id: user.id,
+      full_name: (user.user_metadata?.full_name as string) || user.email?.split('@')[0] || '',
+    })
+
+  const { data, error } = await service
     .from('vaults')
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .insert({
       name: name.trim(),
       description: description?.trim() || null,
       cover_url: cover_url || null,
       owner_id: user.id,
       plan: 'free',
-    } as never)
+    })
     .select()
     .single()
 

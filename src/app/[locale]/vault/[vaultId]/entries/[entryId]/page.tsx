@@ -57,12 +57,12 @@ export default async function EntryPage({ params }: EntryPageProps) {
           <CategoryIcon slug={entry.category_slug} size={20} />
           <Badge variant={entry.category_slug}>{tCat(entry.category_slug)}</Badge>
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50 leading-tight">{entry.title}</h1>
+        <h1 className="text-3xl font-bold text-foreground leading-tight">{entry.title}</h1>
         <div className="flex items-center gap-3">
           <Avatar name={entry.author?.full_name} src={entry.author?.avatar_url} size="md" />
           <div>
-            <p className="text-sm font-medium text-gray-900 dark:text-stone-50">{entry.author?.full_name ?? '—'}</p>
-            <p className="text-xs text-gray-400 dark:text-stone-500">{formattedDate}</p>
+            <p className="text-sm font-medium text-foreground">{entry.author?.full_name ?? '—'}</p>
+            <p className="text-xs text-muted-foreground">{formattedDate}</p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default async function EntryPage({ params }: EntryPageProps) {
       {/* Body */}
       {entry.body && (
         <div className="prose prose-gray dark:prose-invert max-w-none">
-          <p className="text-base leading-relaxed text-gray-900 dark:text-stone-50 whitespace-pre-wrap">{entry.body}</p>
+          <p className="text-base leading-relaxed text-foreground whitespace-pre-wrap">{entry.body}</p>
         </div>
       )}
 
@@ -92,7 +92,7 @@ export default async function EntryPage({ params }: EntryPageProps) {
       )}
 
       {/* Translation tab placeholder */}
-      <div className="border-t border-[var(--color-border)] dark:border-stone-700 pt-6">
+      <div className="border-t border-border pt-6">
         <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20 rounded-lg p-4 text-sm text-amber-700 dark:text-amber-400 leading-relaxed">
           {t('translationComingSoon')}
         </div>
@@ -101,7 +101,7 @@ export default async function EntryPage({ params }: EntryPageProps) {
       <div>
         <Link
           href={`/${locale}/vault/${vaultId}/entries`}
-          className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-stone-400 hover:text-amber-600 dark:hover:text-amber-400"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-amber-600 dark:hover:text-amber-400"
         >
           <ArrowLeft size={16} strokeWidth={1.5} />
           Zurück zu den Einträgen

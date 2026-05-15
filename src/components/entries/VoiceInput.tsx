@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
@@ -99,7 +99,7 @@ export function VoiceInput({ onTranscript }: VoiceInputProps) {
 
   if (!supported) {
     return (
-      <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-stone-400">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
         <AlertCircle size={16} strokeWidth={1.5} />
         {t('voiceUnsupported')}
       </div>
@@ -124,7 +124,7 @@ export function VoiceInput({ onTranscript }: VoiceInputProps) {
           </Button>
         )}
         {isRecording && (
-          <span className="text-sm text-gray-500 dark:text-stone-400 animate-pulse">
+          <span className="text-sm text-muted-foreground animate-pulse">
             {t('voiceTranscribing')}
           </span>
         )}
@@ -132,7 +132,7 @@ export function VoiceInput({ onTranscript }: VoiceInputProps) {
 
       {transcript && (
         <div className="space-y-2">
-          <p className="text-xs text-gray-500 dark:text-stone-400">{t('voiceEditBefore')}</p>
+          <p className="text-xs text-muted-foreground">{t('voiceEditBefore')}</p>
           <Textarea
             value={transcript}
             onChange={(e) => setTranscript(e.target.value)}

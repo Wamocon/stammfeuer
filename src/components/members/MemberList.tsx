@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -57,19 +57,19 @@ export function MemberList({ members, currentUserId, currentRole, vaultId, onUpd
             className={`flex items-center justify-between gap-4 p-4 rounded-xl border ${
               isPending
                 ? 'border-amber-200 bg-amber-50 dark:border-amber-900/30 dark:bg-amber-900/10'
-                : 'border-[var(--color-border)] dark:border-stone-700 bg-white dark:bg-stone-800'
+                : 'border-border bg-card'
             }`}
           >
             <div className="flex items-center gap-3 flex-1 min-w-0">
               <Avatar name={name} src={avatarUrl} size="md" />
               <div className="min-w-0">
-                <p className="font-medium text-gray-900 dark:text-stone-50 truncate">
+                <p className="font-medium text-foreground truncate">
                   {name} {isMe && <span className="text-xs text-gray-400">(du)</span>}
                 </p>
                 <div className="flex items-center gap-2 flex-wrap mt-0.5">
                   <RoleBadge role={member.role} />
                   {member.family_role && (
-                    <span className="text-xs text-gray-500 dark:text-stone-400">{member.family_role}</span>
+                    <span className="text-xs text-muted-foreground">{member.family_role}</span>
                   )}
                   {isPending && (
                     <span className="text-xs text-amber-600 dark:text-amber-400">{t('pendingInvite')}</span>

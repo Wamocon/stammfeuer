@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
@@ -35,7 +35,7 @@ export function PromptWidget({ prompt, locale, vaultId }: PromptWidgetProps) {
         <MessageCircle size={18} className="text-amber-600" strokeWidth={1.5} />
         <span className="text-sm font-semibold text-amber-700 dark:text-amber-400">{t('thisWeek')}</span>
       </div>
-      <p className="text-base leading-relaxed font-medium text-gray-900 dark:text-stone-50 mb-4">
+      <p className="text-base leading-relaxed font-medium text-foreground mb-4">
         &ldquo;{promptText}&rdquo;
       </p>
       <div className="flex gap-2 flex-wrap">

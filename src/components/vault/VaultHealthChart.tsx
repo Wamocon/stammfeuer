@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+﻿import { useTranslations } from 'next-intl'
 import type { CategorySlug } from '@/types/database'
 import { CategoryIcon } from './CategoryIcon'
 
@@ -27,7 +27,7 @@ export function VaultHealthChart({ score, categories }: VaultHealthChartProps) {
       <div className="flex items-center gap-4">
         <div className={`text-4xl font-bold tabular-nums ${scoreColor}`}>{score}%</div>
         <div className="flex-1">
-          <div className="h-3 bg-gray-100 dark:bg-stone-700 rounded-full overflow-hidden">
+          <div className="h-3 bg-muted rounded-full overflow-hidden">
             <div
               className={`h-full rounded-full transition-all duration-500 ${
                 score >= 70
@@ -50,16 +50,16 @@ export function VaultHealthChart({ score, categories }: VaultHealthChartProps) {
           return (
             <div key={cat.slug} className="flex items-center gap-3">
               <CategoryIcon slug={cat.slug} size={18} className="shrink-0" />
-              <span className="text-sm text-gray-600 dark:text-stone-400 w-24 shrink-0 truncate">
+              <span className="text-sm text-muted-foreground w-24 shrink-0 truncate">
                 {t(cat.slug)}
               </span>
-              <div className="flex-1 h-2 bg-gray-100 dark:bg-stone-700 rounded-full overflow-hidden">
+              <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
                 <div
                   className="h-full bg-amber-400 rounded-full transition-all duration-500"
                   style={{ width: `${pct}%` }}
                 />
               </div>
-              <span className="text-xs tabular-nums text-gray-400 dark:text-stone-500 w-8 text-right">
+              <span className="text-xs tabular-nums text-muted-foreground w-8 text-right">
                 {cat.entry_count}
               </span>
             </div>

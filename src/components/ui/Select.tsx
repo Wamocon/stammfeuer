@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import type { SelectHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
@@ -27,8 +27,8 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             className={`w-full appearance-none border ${
               error
                 ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
-                : 'border-[var(--color-border)] dark:border-stone-600 focus:ring-amber-500 focus:border-amber-500'
-            } rounded-lg px-4 py-3 bg-white dark:bg-stone-800 text-base text-gray-900 dark:text-stone-50 focus:outline-none focus:ring-2 transition-colors pr-10 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+                : 'border-border focus:ring-amber-500 focus:border-amber-500'
+            } rounded-lg px-4 py-3 bg-card text-base text-foreground focus:outline-none focus:ring-2 transition-colors pr-10 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
             {...props}
           >
             {options.map((opt) => (

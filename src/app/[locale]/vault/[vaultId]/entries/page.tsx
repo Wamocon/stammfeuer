@@ -52,7 +52,7 @@ export default async function EntriesPage({ params, searchParams }: EntriesPageP
       />
 
       <div className="flex items-center justify-between gap-4 flex-wrap">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">Einträge</h1>
+        <h1 className="text-3xl font-bold text-foreground">Einträge</h1>
         <Link
           href={`/${locale}/vault/${vaultId}/entries/new`}
           className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
@@ -67,7 +67,7 @@ export default async function EntriesPage({ params, searchParams }: EntriesPageP
         <Link
           href={`/${locale}/vault/${vaultId}/entries`}
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            !catFilter ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-stone-800 text-gray-600 dark:text-stone-400 hover:bg-amber-50 dark:hover:bg-stone-700'
+            !catFilter ? 'bg-amber-600 text-white' : 'bg-muted text-muted-foreground hover:bg-accent'
           }`}
         >
           Alle
@@ -79,7 +79,7 @@ export default async function EntriesPage({ params, searchParams }: EntriesPageP
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               catFilter === slug
                 ? 'bg-amber-600 text-white'
-                : 'bg-gray-100 dark:bg-stone-800 text-gray-600 dark:text-stone-400 hover:bg-amber-50 dark:hover:bg-stone-700'
+                : 'bg-muted text-muted-foreground hover:bg-accent'
             }`}
           >
             {tCat(slug)}
@@ -90,7 +90,7 @@ export default async function EntriesPage({ params, searchParams }: EntriesPageP
       {/* Entries grid */}
       {entries.length === 0 ? (
         <div className="text-center py-16">
-          <p className="text-base text-gray-500 dark:text-stone-400 mb-4">
+          <p className="text-base text-muted-foreground mb-4">
             {catFilter ? `Noch keine Einträge in "${tCat(catFilter as CategorySlug)}".` : 'Noch keine Einträge im Vault.'}
           </p>
           <Link

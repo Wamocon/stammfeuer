@@ -239,6 +239,39 @@ export interface VaultHealth {
 }
 
 // -----------------------------------------------------------------------------
+// Family Tree
+// -----------------------------------------------------------------------------
+export type FamilyRelationshipType = 'parent_child' | 'partner'
+export type Gender = 'male' | 'female' | 'other'
+
+export interface FamilyPerson {
+  id: string
+  vault_id: string
+  member_id: string | null
+  full_name: string
+  birth_year: number | null
+  death_year: number | null
+  avatar_url: string | null
+  bio: string | null
+  gender: Gender | null
+  pos_x: number
+  pos_y: number
+  created_at: string
+  updated_at: string
+  // Joined
+  member?: VaultMember
+}
+
+export interface FamilyRelationship {
+  id: string
+  vault_id: string
+  person_a_id: string
+  person_b_id: string
+  relationship_type: FamilyRelationshipType
+  created_at: string
+}
+
+// -----------------------------------------------------------------------------
 // Freemium limits
 // -----------------------------------------------------------------------------
 export const PLAN_LIMITS: Record<Plan, { max_members: number; max_entries: number }> = {
@@ -262,8 +295,10 @@ export interface Database {
       entry_media:    { Row: EntryMedia;    Insert: Partial<EntryMedia>;    Update: Partial<EntryMedia> }
       prompt_library: { Row: PromptLibraryItem; Insert: Partial<PromptLibraryItem>; Update: Partial<PromptLibraryItem> }
       member_prompts: { Row: MemberPrompt;  Insert: Partial<MemberPrompt>;  Update: Partial<MemberPrompt> }
-      notifications:  { Row: Notification; Insert: Partial<Notification>;  Update: Partial<Notification> }
-      subscriptions:  { Row: Subscription; Insert: Partial<Subscription>;  Update: Partial<Subscription> }
+      notifications:       { Row: Notification;        Insert: Partial<Notification>;        Update: Partial<Notification> }
+      subscriptions:       { Row: Subscription;        Insert: Partial<Subscription>;        Update: Partial<Subscription> }
+      family_persons:      { Row: FamilyPerson;        Insert: Partial<FamilyPerson>;        Update: Partial<FamilyPerson> }
+      family_relationships:{ Row: FamilyRelationship;  Insert: Partial<FamilyRelationship>;  Update: Partial<FamilyRelationship> }
     }
   }
 }

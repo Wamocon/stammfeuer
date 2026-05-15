@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -60,7 +60,7 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
   return (
     <div className="space-y-3">
       <div
-        className="border-2 border-dashed border-[var(--color-border)] dark:border-stone-600 rounded-xl p-6 text-center cursor-pointer hover:border-amber-400 transition-colors"
+        className="border-2 border-dashed border-border rounded-xl p-6 text-center cursor-pointer hover:border-amber-400 transition-colors"
         onClick={() => inputRef.current?.click()}
         onDragOver={(e) => e.preventDefault()}
         onDrop={(e) => {
@@ -73,7 +73,7 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
         ) : (
           <>
             <Upload size={32} className="mx-auto mb-2 text-gray-400" strokeWidth={1.5} />
-            <p className="text-sm text-gray-600 dark:text-stone-400">{t('addPhoto')}</p>
+            <p className="text-sm text-muted-foreground">{t('addPhoto')}</p>
           </>
         )}
         <input
@@ -89,7 +89,7 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
       {files.length > 0 && (
         <div className="grid grid-cols-3 gap-2">
           {files.map((file, i) => (
-            <div key={i} className="relative group rounded-lg overflow-hidden aspect-square bg-gray-100 dark:bg-stone-700">
+            <div key={i} className="relative group rounded-lg overflow-hidden aspect-square bg-muted">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={file.url} alt={file.name} className="w-full h-full object-cover" />
               <button

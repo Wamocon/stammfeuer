@@ -2,9 +2,10 @@
   "nav": {
     "home": "Startseite",
     "dashboard": "Dashboard",
-    "vault": "Familien-Vault",
+    "vault": "Familienarchiv",
     "entries": "Einträge",
     "members": "Mitglieder",
+    "familyTree": "Stammbaum",
     "prompts": "Fragen",
     "settings": "Einstellungen",
     "pricing": "Preise",
@@ -15,7 +16,7 @@
   },
   "auth": {
     "loginTitle": "Willkommen zurück",
-    "loginSubtitle": "Melde dich an, um auf deinen Familien-Vault zuzugreifen",
+    "loginSubtitle": "Melde dich an, um auf dein Familienarchiv zuzugreifen",
     "registerTitle": "Konto erstellen",
     "registerSubtitle": "Starte das Gedächtnis deiner Familie",
     "email": "E-Mail-Adresse",
@@ -42,23 +43,23 @@
     }
   },
   "vault": {
-    "create": "Neuen Vault anlegen",
+    "create": "Neues Archiv anlegen",
     "createTitle": "Starte das Gedächtnis eurer Familie",
-    "name": "Name des Vaults",
+    "name": "Name des Archivs",
     "namePlaceholder": "z.B. Familie Müller",
     "description": "Beschreibung",
-    "descriptionPlaceholder": "Worum geht es in diesem Vault? Was soll bewahrt werden?",
+    "descriptionPlaceholder": "Worum geht es in diesem Archiv? Was soll bewahrt werden?",
     "coverImage": "Titelbild (optional)",
-    "createButton": "Vault erstellen",
-    "overview": "Vault-Übersicht",
+    "createButton": "Archiv erstellen",
+    "overview": "Archivübersicht",
     "members": "Mitglieder",
     "lastEntry": "Letzter Eintrag",
     "totalEntries": "Einträge",
-    "noVault": "Du hast noch keinen Familien-Vault.",
-    "createFirst": "Lege jetzt deinen ersten Vault an.",
+    "noVault": "Du hast noch kein Familienarchiv.",
+    "createFirst": "Lege jetzt dein erstes Archiv an.",
     "errors": {
       "nameTooShort": "Name muss mindestens 3 Zeichen lang sein.",
-      "createFailed": "Vault konnte nicht erstellt werden."
+      "createFailed": "Archiv konnte nicht erstellt werden."
     }
   },
   "members": {
@@ -170,7 +171,7 @@
   },
   "pricing": {
     "title": "Wähle deinen Plan",
-    "subtitle": "Das Feuer deiner Familie, für immer am Brennen.",
+    "subtitle": "Das Echo deiner Ahnen, für immer lebendig.",
     "free": {
       "name": "Kostenlos",
       "price": "0 €",

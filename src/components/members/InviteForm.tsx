@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -94,7 +94,7 @@ export function InviteForm({ vaultId, onInvited }: InviteFormProps) {
             <code className="text-xs text-amber-700 dark:text-amber-400 break-all flex-1">{inviteLink}</code>
             <button
               onClick={copyLink}
-              className="shrink-0 p-2 rounded-lg bg-white dark:bg-stone-800 border border-amber-200 dark:border-amber-900/30 text-amber-600 hover:text-amber-700"
+              className="shrink-0 p-2 rounded-lg bg-card border border-amber-200 dark:border-amber-900/30 text-amber-600 hover:text-amber-700"
             >
               {copied ? <Check size={16} strokeWidth={1.5} /> : <Copy size={16} strokeWidth={1.5} />}
             </button>

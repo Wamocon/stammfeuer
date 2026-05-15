@@ -44,7 +44,7 @@ export default function MembersPageClient({
       />
 
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">Mitglieder</h1>
+        <h1 className="text-3xl font-bold text-foreground">Mitglieder</h1>
         {currentRole === 'initiator' && (
           <Button size="sm" onClick={() => setInviteOpen(true)}>
             <UserPlus size={16} strokeWidth={1.5} />

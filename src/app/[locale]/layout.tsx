@@ -8,10 +8,10 @@ import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { ThemeProvider } from 'next-themes'
 import { routing } from '@/i18n/routing'
-import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ToastProvider } from '@/components/ui/Toast'
 import { CookieBanner } from '@/components/cookie/CookieBanner'
+import { AppShell } from '@/components/layout/AppShell'
 import '../globals.css'
 
 const geistSans = Geist({
@@ -54,14 +54,13 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#fdfaf6] dark:bg-stone-900 text-gray-900 dark:text-stone-50">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ToastProvider>
-              <Header locale={locale} />
-              <main className="flex-1">
+              <AppShell locale={locale}>
                 {children}
-              </main>
+              </AppShell>
               <Footer locale={locale} />
               <CookieBanner />
             </ToastProvider>

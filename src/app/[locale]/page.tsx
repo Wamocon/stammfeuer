@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import { BookOpen, Home, Sparkles, ChevronDown, Check } from 'lucide-react'
 import { CategoryIcon } from '@/components/vault/CategoryIcon'
+import { Header } from '@/components/layout/Header'
 import type { CategorySlug } from '@/types/database'
 
 interface HomePageProps {
@@ -32,6 +33,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="overflow-x-hidden">
+      <Header locale={locale} />
       {/* Section 1 - Hero */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-amber-600 via-orange-500 to-red-700 text-white px-4 text-center overflow-hidden">
         <div className="absolute inset-0 bg-black/20 pointer-events-none" />
@@ -74,9 +76,9 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Section 2 - Problem */}
-      <section id="problem" className="py-16 md:py-24 bg-[var(--color-card-bg)] dark:bg-stone-900 px-4">
+      <section id="problem" className="py-16 md:py-24 bg-card px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-stone-50 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
             Was geht verloren, wenn niemand fragt?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -89,8 +91,8 @@ export default async function HomePage({ params }: HomePageProps) {
                 <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
                   <Icon size={32} className="text-amber-600" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-stone-50">{title}</h3>
-                <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400">{desc}</p>
+                <h3 className="text-lg font-bold text-foreground">{title}</h3>
+                <p className="text-base leading-relaxed text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -98,23 +100,23 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Section 3 - Features */}
-      <section id="features" className="py-16 md:py-24 bg-white dark:bg-stone-800 px-4">
+      <section id="features" className="py-16 md:py-24 bg-card px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-stone-50 text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
             6 Kategorien für das komplette Familiengedächtnis
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600 dark:text-stone-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-lg leading-relaxed text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Jede Familie ist einzigartig. Ahnenecho bewahrt jede Art von Erinnerung.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {CATEGORIES.map(({ slug, desc }) => (
               <div
                 key={slug}
-                className="bg-[var(--color-page-bg)] dark:bg-stone-900 border border-[var(--color-border)] dark:border-stone-700 rounded-xl p-5 flex flex-col gap-3"
+                className="bg-background border border-border rounded-xl p-5 flex flex-col gap-3"
               >
                 <CategoryIcon slug={slug} size={32} />
-                <h3 className="text-lg font-bold text-gray-900 dark:text-stone-50">{CATEGORY_NAMES[slug]}</h3>
-                <p className="text-sm leading-relaxed text-gray-600 dark:text-stone-400">{desc}</p>
+                <h3 className="text-lg font-bold text-foreground">{CATEGORY_NAMES[slug]}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -122,9 +124,9 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Section 4 - How it works */}
-      <section className="py-16 md:py-24 bg-[var(--color-card-bg)] dark:bg-stone-900 px-4">
+      <section className="py-16 md:py-24 bg-card px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-stone-50 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
             So einfach geht&apos;s
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -138,8 +140,8 @@ export default async function HomePage({ params }: HomePageProps) {
                 <div className="w-16 h-16 rounded-full bg-amber-600 text-white font-extrabold text-2xl flex items-center justify-center shadow-lg z-10">
                   {num}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-stone-50">{title}</h3>
-                <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400">{desc}</p>
+                <h3 className="text-xl font-bold text-foreground">{title}</h3>
+                <p className="text-base leading-relaxed text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -157,24 +159,24 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Section 6 - Pricing teaser */}
-      <section className="py-16 md:py-24 bg-white dark:bg-stone-800 px-4">
+      <section className="py-16 md:py-24 bg-card px-4">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-lg italic text-gray-600 dark:text-stone-400 mb-4">
+          <p className="text-center text-lg italic text-muted-foreground mb-4">
             Weniger als ein Kaffee im Monat. Ein Erbe für immer.
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-stone-50 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
             {tPricing('title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Free */}
-            <div className="bg-[var(--color-page-bg)] dark:bg-stone-900 border border-[var(--color-border)] dark:border-stone-700 rounded-2xl p-6 flex flex-col gap-4">
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-4">
               <div>
-                <p className="text-lg font-bold text-gray-900 dark:text-stone-50">{tPricing('free.name')}</p>
-                <p className="text-4xl font-extrabold text-gray-900 dark:text-stone-50 mt-1">{tPricing('free.price')}</p>
+                <p className="text-lg font-bold text-foreground">{tPricing('free.name')}</p>
+                <p className="text-4xl font-extrabold text-foreground mt-1">{tPricing('free.price')}</p>
               </div>
               <ul className="space-y-2 flex-1">
                 {(tPricing.raw('free.features') as string[]).map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-gray-600 dark:text-stone-400">
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Check size={16} className="text-emerald-600 shrink-0" strokeWidth={2} />{f}
                   </li>
                 ))}
@@ -184,20 +186,20 @@ export default async function HomePage({ params }: HomePageProps) {
               </Link>
             </div>
             {/* Pro */}
-            <div className="relative bg-[var(--color-page-bg)] dark:bg-stone-900 border-2 border-amber-600 rounded-2xl p-6 flex flex-col gap-4 shadow-lg">
+            <div className="relative bg-background border-2 border-amber-600 rounded-2xl p-6 flex flex-col gap-4 shadow-lg">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-xs font-bold px-4 py-1 rounded-full">
                 Beliebt
               </span>
               <div>
-                <p className="text-lg font-bold text-gray-900 dark:text-stone-50">{tPricing('pro.name')}</p>
-                <p className="text-4xl font-extrabold text-gray-900 dark:text-stone-50 mt-1">
+                <p className="text-lg font-bold text-foreground">{tPricing('pro.name')}</p>
+                <p className="text-4xl font-extrabold text-foreground mt-1">
                   {tPricing('pro.price')}<span className="text-base font-normal text-gray-500">{tPricing('pro.period')}</span>
                 </p>
                 <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">{tPricing('pro.yearlyPrice')}</p>
               </div>
               <ul className="space-y-2 flex-1">
                 {(tPricing.raw('pro.features') as string[]).map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-gray-600 dark:text-stone-400">
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Check size={16} className="text-emerald-600 shrink-0" strokeWidth={2} />{f}
                   </li>
                 ))}
@@ -207,16 +209,16 @@ export default async function HomePage({ params }: HomePageProps) {
               </Link>
             </div>
             {/* Familie+ */}
-            <div className="bg-[var(--color-page-bg)] dark:bg-stone-900 border border-[var(--color-border)] dark:border-stone-700 rounded-2xl p-6 flex flex-col gap-4">
+            <div className="bg-background border border-border rounded-2xl p-6 flex flex-col gap-4">
               <div>
-                <p className="text-lg font-bold text-gray-900 dark:text-stone-50">{tPricing('familyPlus.name')}</p>
-                <p className="text-4xl font-extrabold text-gray-900 dark:text-stone-50 mt-1">
+                <p className="text-lg font-bold text-foreground">{tPricing('familyPlus.name')}</p>
+                <p className="text-4xl font-extrabold text-foreground mt-1">
                   {tPricing('familyPlus.price')}<span className="text-base font-normal text-gray-500">{tPricing('familyPlus.period')}</span>
                 </p>
               </div>
               <ul className="space-y-2 flex-1">
                 {(tPricing.raw('familyPlus.features') as string[]).map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-gray-600 dark:text-stone-400">
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Check size={16} className="text-emerald-600 shrink-0" strokeWidth={2} />{f}
                   </li>
                 ))}

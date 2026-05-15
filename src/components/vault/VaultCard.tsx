@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import type { VaultWithStats } from '@/types/database'
 import { Badge } from '@/components/ui/Badge'
@@ -22,7 +22,7 @@ export function VaultCard({ vault, locale }: VaultCardProps) {
 
   return (
     <Link href={`/${locale}/vault/${vault.id}`} className="block">
-      <div className="bg-white dark:bg-stone-800 border border-[var(--color-border)] dark:border-stone-700 rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200 h-full">
+      <div className="bg-card border border-border rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200 h-full">
         {vault.cover_url && (
           <div className="w-full h-32 rounded-lg mb-4 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -30,17 +30,17 @@ export function VaultCard({ vault, locale }: VaultCardProps) {
           </div>
         )}
         <div className="flex items-start justify-between gap-2 mb-3">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-stone-50 leading-tight">
+          <h3 className="text-lg font-bold text-foreground leading-tight">
             {vault.name}
           </h3>
           <Badge variant={vault.user_role}>{vault.user_role}</Badge>
         </div>
         {vault.description && (
-          <p className="text-sm leading-relaxed text-gray-600 dark:text-stone-400 mb-4 line-clamp-2">
+          <p className="text-sm leading-relaxed text-muted-foreground mb-4 line-clamp-2">
             {vault.description}
           </p>
         )}
-        <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-stone-400">
+        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
           <span className="flex items-center gap-1">
             <Users size={14} strokeWidth={1.5} />
             {vault.member_count} {t('members')}

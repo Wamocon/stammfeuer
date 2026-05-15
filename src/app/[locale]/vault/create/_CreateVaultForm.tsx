@@ -37,12 +37,13 @@ export default function CreateVaultForm({ locale, categories }: CreateVaultFormP
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name.trim(), description: description.trim() || null }),
       })
-      if (!res.ok) throw new Error()
-      const { vault } = await res.json()
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Failed')
+      const { vault } = data
       showToast('Euer Familienarchiv wurde erstellt!', 'success')
       router.push(`/${locale}/vault/${vault.id}`)
-    } catch {
-      setError(t('errors.createFailed'))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('errors.createFailed'))
     } finally {
       setLoading(false)
     }
@@ -50,8 +51,8 @@ export default function CreateVaultForm({ locale, categories }: CreateVaultFormP
 
   return (
     <div className="max-w-xl mx-auto px-4 sm:px-6 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50 mb-2">{t('createTitle')}</h1>
-      <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400 mb-8">
+      <h1 className="text-3xl font-bold text-foreground mb-2">{t('createTitle')}</h1>
+      <p className="text-base leading-relaxed text-muted-foreground mb-8">
         Wähle einen Namen, den alle Familienmitglieder wiedererkennen.
       </p>
 
@@ -78,7 +79,7 @@ export default function CreateVaultForm({ locale, categories }: CreateVaultFormP
 
       {/* Category preview */}
       <div className="mt-10">
-        <p className="text-sm font-semibold text-gray-500 dark:text-stone-400 mb-3 uppercase tracking-wide">
+        <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wide">
           Diese 6 Kategorien werden automatisch angelegt
         </p>
         <div className="flex flex-wrap gap-2">

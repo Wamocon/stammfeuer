@@ -2,9 +2,10 @@
   "nav": {
     "home": "Home",
     "dashboard": "Dashboard",
-    "vault": "Family Vault",
+    "vault": "Family Archive",
     "entries": "Entries",
     "members": "Members",
+    "familyTree": "Family Tree",
     "prompts": "Prompts",
     "settings": "Settings",
     "pricing": "Pricing",
@@ -15,7 +16,7 @@
   },
   "auth": {
     "loginTitle": "Welcome back",
-    "loginSubtitle": "Sign in to access your family vault",
+    "loginSubtitle": "Sign in to access your family archive",
     "registerTitle": "Create an account",
     "registerSubtitle": "Start your family's memory archive",
     "email": "Email address",
@@ -42,23 +43,23 @@
     }
   },
   "vault": {
-    "create": "Create new vault",
+    "create": "Create new archive",
     "createTitle": "Start your family's memory",
-    "name": "Vault name",
+    "name": "Archive name",
     "namePlaceholder": "e.g. Miller Family",
     "description": "Description",
-    "descriptionPlaceholder": "What is this vault about? What should be preserved?",
+    "descriptionPlaceholder": "What is this archive about? What should be preserved?",
     "coverImage": "Cover image (optional)",
-    "createButton": "Create vault",
-    "overview": "Vault overview",
+    "createButton": "Create archive",
+    "overview": "Archive overview",
     "members": "Members",
     "lastEntry": "Last entry",
     "totalEntries": "Entries",
-    "noVault": "You don't have a family vault yet.",
-    "createFirst": "Create your first vault now.",
+    "noVault": "You don't have a family archive yet.",
+    "createFirst": "Create your first archive now.",
     "errors": {
       "nameTooShort": "Name must be at least 3 characters.",
-      "createFailed": "Could not create vault."
+      "createFailed": "Could not create archive."
     }
   },
   "members": {

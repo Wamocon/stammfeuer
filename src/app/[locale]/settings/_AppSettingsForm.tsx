@@ -60,11 +60,11 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
 
   return (
     <div className="max-w-xl mx-auto px-4 sm:px-6 py-10 space-y-8">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">{t('title')}</h1>
+      <h1 className="text-3xl font-bold text-foreground">{t('title')}</h1>
 
       {/* Theme */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-stone-50 mb-3">{t('theme')}</h2>
+        <h2 className="text-lg font-semibold text-foreground mb-3">{t('theme')}</h2>
         <div className="flex gap-2 flex-wrap">
           {themeOptions.map(({ value, label, Icon }) => (
             <button
@@ -73,7 +73,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
               className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
                 theme === value
                   ? 'border-amber-600 bg-amber-50 text-amber-700 dark:border-amber-400 dark:bg-amber-900/20 dark:text-amber-400'
-                  : 'border-[var(--color-border)] dark:border-stone-700 text-gray-600 dark:text-stone-400 hover:border-amber-400'
+                  : 'border-border text-muted-foreground hover:border-amber-400'
               }`}
             >
               <Icon size={16} strokeWidth={1.5} />
@@ -85,7 +85,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
 
       {/* Language */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-stone-50 mb-3">{t('language')}</h2>
+        <h2 className="text-lg font-semibold text-foreground mb-3">{t('language')}</h2>
         <div className="flex gap-2">
           {['de', 'en'].map((l) => (
             <Link
@@ -94,7 +94,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
               className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
                 l === locale
                   ? 'border-amber-600 bg-amber-50 text-amber-700 dark:border-amber-400 dark:bg-amber-900/20 dark:text-amber-400'
-                  : 'border-[var(--color-border)] dark:border-stone-700 text-gray-600 dark:text-stone-400 hover:border-amber-400'
+                  : 'border-border text-muted-foreground hover:border-amber-400'
               }`}
             >
               {l === 'de' ? 'Deutsch' : 'English'}
@@ -105,7 +105,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
 
       {/* Data */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-stone-50 mb-3">Daten</h2>
+        <h2 className="text-lg font-semibold text-foreground mb-3">Daten</h2>
         <Button variant="secondary" size="sm" onClick={handleExport}>
           {t('exportData')}
         </Button>
@@ -114,7 +114,7 @@ export default function AppSettingsForm({ locale, userEmail }: AppSettingsFormPr
       {/* Danger zone */}
       <section className="border-t border-red-200 dark:border-red-900/30 pt-6">
         <h2 className="text-lg font-semibold text-red-700 dark:text-red-400 mb-2">{t('dangerZone')}</h2>
-        <p className="text-sm leading-relaxed text-gray-600 dark:text-stone-400 mb-4">
+        <p className="text-sm leading-relaxed text-muted-foreground mb-4">
           Das Löschen deines Kontos entfernt alle deine Daten unwiderruflich.
         </p>
         <Button variant="danger" size="sm" onClick={handleDeleteAccount}>

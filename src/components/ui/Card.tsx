@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+﻿import type { ReactNode } from 'react'
 
 interface CardProps {
   children: ReactNode
@@ -9,7 +9,7 @@ interface CardProps {
 export function Card({ children, className = '', hover = false }: CardProps) {
   return (
     <div
-      className={`bg-white dark:bg-stone-800 border border-[var(--color-border)] dark:border-stone-700 rounded-xl shadow-sm p-6 ${
+      className={`bg-card border border-border rounded-xl shadow-sm p-6 ${
         hover ? 'hover:shadow-md transition-shadow duration-200 cursor-pointer' : ''
       } ${className}`}
     >

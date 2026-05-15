@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import type { TextareaHTMLAttributes } from 'react'
 import { forwardRef } from 'react'
@@ -26,11 +26,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           className={`border ${
             error
               ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
-              : 'border-[var(--color-border)] dark:border-stone-600 focus:ring-amber-500 focus:border-amber-500'
-          } rounded-lg px-4 py-3 bg-white dark:bg-stone-800 text-base text-gray-900 dark:text-stone-50 placeholder:text-gray-400 dark:placeholder:text-stone-500 focus:outline-none focus:ring-2 transition-colors resize-y leading-relaxed disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+              : 'border-border focus:ring-amber-500 focus:border-amber-500'
+          } rounded-lg px-4 py-3 bg-card text-base text-foreground placeholder:text-gray-400 dark:placeholder:text-stone-500 focus:outline-none focus:ring-2 transition-colors resize-y leading-relaxed disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
           {...props}
         />
-        {hint && !error && <p className="text-sm text-gray-500 dark:text-stone-400">{hint}</p>}
+        {hint && !error && <p className="text-sm text-muted-foreground">{hint}</p>}
         {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
       </div>
     )

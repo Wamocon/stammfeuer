@@ -3,17 +3,17 @@ import Link from 'next/link'
 export default function DatenschutzPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-      <nav className="text-sm text-gray-500 dark:text-stone-400 mb-8">
+      <nav className="text-sm text-muted-foreground mb-8">
         <Link href="/" className="hover:text-amber-600 transition-colors">Start</Link>
         <span className="mx-2">/</span>
         <span>Datenschutz</span>
       </nav>
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50 mb-2">Datenschutzerklärung</h1>
-      <p className="text-sm text-gray-500 dark:text-stone-400 mb-10">Stand: Mai 2026</p>
+      <h1 className="text-3xl font-bold text-foreground mb-2">Datenschutzerklärung</h1>
+      <p className="text-sm text-muted-foreground mb-10">Stand: Mai 2026</p>
 
       <div className="space-y-10 text-base leading-relaxed text-gray-700 dark:text-stone-300">
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">1. Verantwortlicher</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">1. Verantwortlicher</h2>
           <p>
             WAMOCON GmbH, Mergenthalerallee 79 - 81, 65760 Eschborn<br />
             Telefon: +49 6196 5838311<br />
@@ -24,7 +24,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">2. Überblick</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">2. Überblick</h2>
           <p>
             Diese Datenschutzerklärung gilt für die Website und Webanwendung Ahnenecho (ahnenecho.app).
             Wir verarbeiten personenbezogene Daten nur, soweit es zur Bereitstellung unserer Plattform notwendig ist.
@@ -32,7 +32,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">3. Rechtsgrundlagen</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">3. Rechtsgrundlagen</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>Einwilligung - Art. 6 Abs. 1 lit. a DSGVO</li>
             <li>Vertragserfüllung - Art. 6 Abs. 1 lit. b DSGVO</li>
@@ -42,7 +42,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">4. Hosting und Infrastruktur</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">4. Hosting und Infrastruktur</h2>
           <p className="mb-3">
             <strong>Vercel Inc.</strong> - Website-Hosting. Technisch notwendige Verbindungsdaten (IP, Zeitstempel, Browser).
             Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
@@ -55,7 +55,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">5. Erhobene Daten</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">5. Erhobene Daten</h2>
           <p className="mb-3">
             <strong>Registrierung:</strong> Name, E-Mail-Adresse, Passwort (Art. 6 Abs. 1 lit. b DSGVO).
           </p>
@@ -66,7 +66,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">6. Cookies</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">6. Cookies</h2>
           <p>
             Ahnenecho verwendet ausschließlich technisch notwendige Cookies für Session-Management und Authentifizierung.
             Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Es werden keine Tracking- oder Werbe-Cookies eingesetzt.
@@ -74,7 +74,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">7. Ihre Rechte</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">7. Ihre Rechte</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>Auskunft (Art. 15 DSGVO)</li>
             <li>Berichtigung (Art. 16 DSGVO)</li>
@@ -90,7 +90,7 @@ export default function DatenschutzPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-stone-50 mb-3">8. Beschwerderecht</h2>
+          <h2 className="text-xl font-bold text-foreground mb-3">8. Beschwerderecht</h2>
           <p>
             Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren.
             Zuständig für WAMOCON GmbH ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit.

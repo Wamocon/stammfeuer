@@ -45,7 +45,7 @@ export default function VaultSettingsForm({ locale, vault }: VaultSettingsFormPr
           { label: 'Einstellungen' },
         ]}
       />
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">Vault-Einstellungen</h1>
+      <h1 className="text-3xl font-bold text-foreground">Vault-Einstellungen</h1>
 
       <form onSubmit={handleSave} className="space-y-4">
         <Input
@@ -65,7 +65,7 @@ export default function VaultSettingsForm({ locale, vault }: VaultSettingsFormPr
 
       <div className="border-t border-red-200 dark:border-red-900/30 pt-6">
         <h2 className="text-lg font-bold text-red-700 dark:text-red-400 mb-2">Gefahrenzone</h2>
-        <p className="text-sm leading-relaxed text-gray-600 dark:text-stone-400 mb-4">
+        <p className="text-sm leading-relaxed text-muted-foreground mb-4">
           Das Löschen des Vaults entfernt alle Einträge, Mitglieder und Medien unwiderruflich.
         </p>
         <Button variant="danger" size="sm" onClick={() => setDeleteOpen(true)}>
@@ -74,7 +74,7 @@ export default function VaultSettingsForm({ locale, vault }: VaultSettingsFormPr
       </div>
 
       <Modal open={deleteOpen} onClose={() => setDeleteOpen(false)} title="Vault wirklich löschen?">
-        <p className="text-sm leading-relaxed text-gray-600 dark:text-stone-400 mb-4">
+        <p className="text-sm leading-relaxed text-muted-foreground mb-4">
           Diese Aktion kann nicht rückgängig gemacht werden. Alle Einträge und Medien werden dauerhaft gelöscht.
         </p>
         <div className="flex gap-3">

@@ -33,7 +33,7 @@ export default function ResetPasswordForm({ locale }: { locale: string }) {
       <div className="w-full max-w-md">
         <Link
           href={`/${locale}/auth/login`}
-          className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-stone-400 hover:text-amber-600 dark:hover:text-amber-400 mb-8"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-amber-600 dark:hover:text-amber-400 mb-8"
         >
           <ArrowLeft size={16} strokeWidth={1.5} />
           Zurück zur Anmeldung
@@ -42,15 +42,15 @@ export default function ResetPasswordForm({ locale }: { locale: string }) {
         {sent ? (
           <div className="text-center">
             <CheckCircle size={48} className="text-emerald-600 mx-auto mb-4" strokeWidth={1.5} />
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-stone-50 mb-2">{t('success.resetLinkSent')}</h1>
-            <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400">
+            <h1 className="text-2xl font-bold text-foreground mb-2">{t('success.resetLinkSent')}</h1>
+            <p className="text-base leading-relaxed text-muted-foreground">
               Wir haben dir einen Link geschickt. Bitte prüfe dein Postfach.
             </p>
           </div>
         ) : (
           <>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-stone-50 mb-1">{t('resetPasswordTitle')}</h1>
-            <p className="text-base leading-relaxed text-gray-600 dark:text-stone-400 mb-6">{t('resetPasswordSubtitle')}</p>
+            <h1 className="text-2xl font-bold text-foreground mb-1">{t('resetPasswordTitle')}</h1>
+            <p className="text-base leading-relaxed text-muted-foreground mb-6">{t('resetPasswordSubtitle')}</p>
             <form onSubmit={handleReset} className="space-y-4">
               <Input
                 label={t('email')}

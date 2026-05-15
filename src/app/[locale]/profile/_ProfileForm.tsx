@@ -46,13 +46,13 @@ export default function ProfileForm({ locale, profile, userId }: ProfileFormProp
 
   return (
     <div className="max-w-xl mx-auto px-4 sm:px-6 py-10 space-y-8">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-stone-50">{t('title')}</h1>
+      <h1 className="text-3xl font-bold text-foreground">{t('title')}</h1>
 
       <div className="flex items-center gap-4">
         <Avatar name={fullName} size="lg" />
         <div>
-          <p className="text-sm font-medium text-gray-900 dark:text-stone-50">{fullName || 'Dein Name'}</p>
-          <p className="text-xs text-gray-400 dark:text-stone-500">{t('changeAvatar')} (folgt in V2)</p>
+          <p className="text-sm font-medium text-foreground">{fullName || 'Dein Name'}</p>
+          <p className="text-xs text-muted-foreground">{t('changeAvatar')} (folgt in V2)</p>
         </div>
       </div>
 

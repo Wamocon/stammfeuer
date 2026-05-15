@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { createContext, useCallback, useContext, useState, type ReactNode } from 'react'
 import { CheckCircle, XCircle, Info, X } from 'lucide-react'
@@ -37,12 +37,12 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         {toasts.map((toast) => (
           <div
             key={toast.id}
-            className="pointer-events-auto flex items-center gap-3 bg-white dark:bg-stone-800 border border-[var(--color-border)] dark:border-stone-700 rounded-xl shadow-lg px-4 py-3 min-w-[260px] max-w-sm animate-toast-in"
+            className="pointer-events-auto flex items-center gap-3 bg-card border border-border rounded-xl shadow-lg px-4 py-3 min-w-[260px] max-w-sm animate-toast-in"
           >
             {toast.type === 'success' && <CheckCircle size={20} className="text-emerald-600 shrink-0" strokeWidth={1.5} />}
             {toast.type === 'error' && <XCircle size={20} className="text-red-600 shrink-0" strokeWidth={1.5} />}
             {toast.type === 'info' && <Info size={20} className="text-amber-600 shrink-0" strokeWidth={1.5} />}
-            <span className="text-sm text-gray-900 dark:text-stone-50 flex-1 leading-relaxed">{toast.message}</span>
+            <span className="text-sm text-foreground flex-1 leading-relaxed">{toast.message}</span>
             <button
               onClick={() => dismiss(toast.id)}
               className="shrink-0 text-gray-400 hover:text-gray-600 dark:text-stone-500 dark:hover:text-stone-300"

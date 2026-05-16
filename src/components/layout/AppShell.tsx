@@ -2,6 +2,8 @@
 
 import { usePathname } from 'next/navigation'
 import { Sidebar } from '@/components/layout/Sidebar'
+import { Header } from '@/components/layout/Header'
+import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
@@ -55,11 +57,32 @@ export function AppShell({ locale, children }: AppShellProps) {
   const userAvatarUrl = (user.user_metadata?.avatar_url as string | undefined)
 
   return (
-    <div className="flex flex-1 min-h-0">
-      <Sidebar locale={locale} vaults={vaults} activeVaultId={activeVaultId} userName={userName} userAvatarUrl={userAvatarUrl} />
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
-    </div>
+    <>
+      {/* App header - contains logo, theme toggle, language switcher */}
+      <Header locale={locale} />
+
+      {/* Main layout: sidebar (desktop) + scrollable content */}
+      <div className="flex flex-1 min-h-0">
+        <Sidebar
+          locale={locale}
+          vaults={vaults}
+          activeVaultId={activeVaultId}
+          userName={userName}
+          userAvatarUrl={userAvatarUrl}
+        />
+        {/* pb-20 on mobile to avoid content hiding behind the fixed bottom nav */}
+        <main className="flex-1 overflow-auto pb-20 lg:pb-0">
+          {children}
+        </main>
+      </div>
+
+      {/* Mobile bottom navigation - hidden on lg+ */}
+      <MobileBottomNav
+        locale={locale}
+        activeVaultId={activeVaultId}
+        vaults={vaults}
+      />
+    </>
   )
 }
+

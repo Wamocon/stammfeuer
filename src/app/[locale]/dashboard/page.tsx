@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
 import { EntryCard } from '@/components/entries/EntryCard'
 import { PromptWidget } from '@/components/prompts/PromptWidget'
@@ -94,6 +95,8 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
     if (promptData) prompt = promptData as MemberPrompt
   }
 
+  const t = await getTranslations('dashboard')
+
   const displayName = (user.user_metadata?.full_name as string | undefined)?.split(' ')[0] ?? 'Familie'
   const totalEntries = vaults.reduce((sum, v) => sum + v.entry_count, 0)
   const totalMembers = vaults.reduce((sum, v) => sum + v.member_count, 0)
@@ -109,17 +112,17 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
             </div>
           </div>
           <h1 className="text-2xl font-bold text-foreground mb-2">
-            Willkommen bei Ahnenecho
+            {t('welcomeTitle')}
           </h1>
           <p className="text-base leading-relaxed text-muted-foreground mb-6">
-            Lege jetzt dein erstes Familienarchiv an.
+            {t('welcomeSubtitle')}
           </p>
           <Link
             href={`/${locale}/vault/create`}
             className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             <Plus size={18} strokeWidth={1.5} />
-            Neues Archiv anlegen
+            {t('newArchiveBtn')}
           </Link>
         </div>
       </div>
@@ -132,27 +135,28 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
       {/* Welcome */}
       <div>
         <h1 className="text-2xl font-bold text-foreground">
-          Guten Tag, {displayName}
+          {t('greeting', { name: displayName })}
         </h1>
         <p className="text-sm text-muted-foreground mt-0.5">
           {new Date().toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-GB', { weekday: 'long', day: 'numeric', month: 'long' })}
         </p>
       </div>
 
-      {/* Stats bar */}
-      <div className="grid grid-cols-3 gap-4">
+      {/* Stats bar - 3 cols, compact on mobile */}
+      <div className="grid grid-cols-3 gap-2 sm:gap-4">
         {[
-          { label: 'Archive', value: vaults.length, icon: Archive },
-          { label: 'Eintraege', value: totalEntries, icon: BookOpen },
-          { label: 'Mitglieder', value: totalMembers, icon: Users },
+          { label: t('archives'), value: vaults.length, icon: Archive },
+          { label: t('entriesCount'), value: totalEntries, icon: BookOpen },
+          { label: t('membersCount'), value: totalMembers, icon: Users },
         ].map(({ label, value, icon: Icon }) => (
-          <div key={label} className="bg-card border border-border rounded-xl p-4 flex items-center gap-4">
-            <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center shrink-0">
-              <Icon size={20} className="text-amber-600" strokeWidth={1.5} />
+          <div key={label} className="bg-card border border-border rounded-xl p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-1 sm:gap-4">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center shrink-0">
+              <Icon size={16} className="text-amber-600 sm:hidden" strokeWidth={1.5} />
+              <Icon size={20} className="text-amber-600 hidden sm:block" strokeWidth={1.5} />
             </div>
-            <div>
-              <p className="text-2xl font-bold text-foreground">{value}</p>
-              <p className="text-xs text-muted-foreground">{label}</p>
+            <div className="text-center sm:text-left">
+              <p className="text-xl sm:text-2xl font-bold text-foreground">{value}</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">{label}</p>
             </div>
           </div>
         ))}
@@ -162,13 +166,13 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
         {/* Archives list */}
         <div className="lg:col-span-2 space-y-3">
           <div className="flex items-center justify-between">
-            <h2 className="text-base font-semibold text-foreground">Deine Archive</h2>
+            <h2 className="text-base font-semibold text-foreground">{t('yourArchives')}</h2>
             <Link
               href={`/${locale}/vault/create`}
               className="flex items-center gap-1.5 text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline"
             >
               <Plus size={14} strokeWidth={2} />
-              Neues Archiv
+              {t('newArchiveLink')}
             </Link>
           </div>
           <div className="space-y-2">
@@ -183,11 +187,11 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
                   <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <BookOpen size={12} strokeWidth={1.5} />
-                      {vault.entry_count} Eintraege
+                      {vault.entry_count} {t('entriesCount')}
                     </span>
                     <span className="flex items-center gap-1">
                       <Users size={12} strokeWidth={1.5} />
-                      {vault.member_count} Mitglieder
+                      {vault.member_count} {t('membersCount')}
                     </span>
                   </div>
                 </div>
@@ -199,7 +203,7 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
 
         {/* Prompt widget */}
         <div>
-          <h2 className="text-base font-semibold text-foreground mb-3">Offene Frage</h2>
+          <h2 className="text-base font-semibold text-foreground mb-3">{t('openQuestion')}</h2>
           <PromptWidget prompt={prompt} locale={locale} vaultId={primaryVault?.id ?? ''} />
         </div>
       </div>
@@ -209,28 +213,28 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-base font-semibold text-foreground flex items-center gap-2">
             <Clock size={16} className="text-amber-600" strokeWidth={1.5} />
-            Zuletzt hinzugefuegt
+            {t('recentlyAdded')}
           </h2>
           {primaryVault && (
             <Link
               href={`/${locale}/vault/${primaryVault.id}/entries`}
               className="text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline"
             >
-              Alle Eintraege
+              {t('allEntries')}
             </Link>
           )}
         </div>
         {recentEntries.length === 0 ? (
           <div className="text-center py-12 bg-card border border-border rounded-xl">
             <BookOpen size={32} className="mx-auto text-gray-300 dark:text-stone-600 mb-3" strokeWidth={1.5} />
-            <p className="text-sm text-muted-foreground">Noch keine Eintraege. Starte mit deiner ersten Geschichte.</p>
+            <p className="text-sm text-muted-foreground">{t('noEntriesMsg')}</p>
             {primaryVault && (
               <Link
                 href={`/${locale}/vault/${primaryVault.id}/entries/new`}
                 className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-amber-600 dark:text-amber-400 hover:underline"
               >
                 <Plus size={14} strokeWidth={2} />
-                Ersten Eintrag erstellen
+                {t('createFirstEntry')}
               </Link>
             )}
           </div>

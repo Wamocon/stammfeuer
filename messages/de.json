@@ -12,7 +12,12 @@
     "help": "Hilfe",
     "login": "Anmelden",
     "logout": "Abmelden",
-    "register": "Registrieren"
+    "register": "Registrieren",
+    "archive": "Archive",
+    "thisVault": "Dieses Archiv",
+    "newArchive": "Neues Archiv",
+    "overview": "Übersicht",
+    "newEntry": "Neu"
   },
   "auth": {
     "loginTitle": "Willkommen zurück",
@@ -160,7 +165,21 @@
     "timelineGaps": "Zeiträume ohne Einträge",
     "timelineGapsHint": "Für diese Jahre gibt es noch keine Geschichten.",
     "score": "Vollständigkeit",
-    "noEntries": "Noch keine Einträge im Vault."
+    "noEntries": "Noch keine Einträge im Vault.",
+    "greeting": "Guten Tag, {name}",
+    "archives": "Archive",
+    "entriesCount": "Einträge",
+    "membersCount": "Mitglieder",
+    "yourArchives": "Deine Archive",
+    "openQuestion": "Offene Frage",
+    "recentlyAdded": "Zuletzt hinzugefügt",
+    "allEntries": "Alle Einträge",
+    "createFirstEntry": "Ersten Eintrag erstellen",
+    "noEntriesMsg": "Noch keine Einträge. Starte mit deiner ersten Geschichte.",
+    "welcomeTitle": "Willkommen bei Ahnenecho",
+    "welcomeSubtitle": "Lege jetzt dein erstes Familienarchiv an.",
+    "newArchiveBtn": "Neues Archiv anlegen",
+    "newArchiveLink": "Neues Archiv"
   },
   "freemium": {
     "limitReached": "Limit erreicht",

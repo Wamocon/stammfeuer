@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { LayoutDashboard, BookOpen, Settings, HelpCircle, LogOut, ChevronDown, ChevronRight, PlusCircle, GitBranch } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { useState } from 'react'
@@ -24,6 +25,7 @@ interface SidebarProps {
 export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvatarUrl }: SidebarProps) {
   const pathname = usePathname()
   const router = useRouter()
+  const t = useTranslations('nav')
   const [vaultsOpen, setVaultsOpen] = useState(true)
 
   async function handleLogout() {
@@ -45,20 +47,20 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
 
   const activeVaultLinks = activeVaultId
     ? [
-        { href: `/${locale}/vault/${activeVaultId}`, icon: BookOpen, label: 'Uebersicht' },
-        { href: `/${locale}/vault/${activeVaultId}/entries`, icon: BookOpen, label: 'Eintraege' },
-        { href: `/${locale}/vault/${activeVaultId}/family`, icon: GitBranch, label: 'Familie' },
-        { href: `/${locale}/vault/${activeVaultId}/settings`, icon: Settings, label: 'Einstellungen' },
+        { href: `/${locale}/vault/${activeVaultId}`, icon: BookOpen, label: t('overview') },
+        { href: `/${locale}/vault/${activeVaultId}/entries`, icon: BookOpen, label: t('entries') },
+        { href: `/${locale}/vault/${activeVaultId}/family`, icon: GitBranch, label: t('familyTree') },
+        { href: `/${locale}/vault/${activeVaultId}/settings`, icon: Settings, label: t('settings') },
       ]
     : []
 
   return (
-    <aside className="flex flex-col w-64 shrink-0 h-[calc(100vh-4rem)] sticky top-16 border-r border-sidebar-border bg-sidebar text-sidebar-foreground overflow-y-auto">
+    <aside className="hidden lg:flex flex-col w-64 shrink-0 h-[calc(100vh-4rem)] sticky top-16 border-r border-sidebar-border bg-sidebar text-sidebar-foreground overflow-y-auto">
       <nav className="flex-1 p-3 space-y-1">
         {/* Dashboard */}
         <Link href={`/${locale}/dashboard`} className={linkClass(`/${locale}/dashboard`)}>
           <LayoutDashboard size={18} strokeWidth={1.5} />
-          Dashboard
+          {t('dashboard')}
         </Link>
 
         {/* Vaults section */}
@@ -67,7 +69,7 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
             onClick={() => setVaultsOpen((v) => !v)}
             className="flex items-center justify-between w-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors"
           >
-            Archive
+            {t('archive')}
             {vaultsOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
           </button>
 
@@ -88,7 +90,7 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
                 className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
               >
                 <PlusCircle size={18} strokeWidth={1.5} />
-                Neues Archiv
+                {t('newArchive')}
               </Link>
             </div>
           )}
@@ -98,7 +100,7 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
         {activeVaultLinks.length > 0 && (
           <div className="pt-2">
             <p className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Dieses Archiv
+              {t('thisVault')}
             </p>
             <div className="mt-1 space-y-0.5">
               {activeVaultLinks.map((item) => (
@@ -116,18 +118,18 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
       <div className="p-3 border-t border-sidebar-border space-y-0.5">
         <Link href={`/${locale}/help`} className={linkClass(`/${locale}/help`)}>
           <HelpCircle size={18} strokeWidth={1.5} />
-          Hilfe
+          {t('help')}
         </Link>
         <Link href={`/${locale}/profile`} className={linkClass(`/${locale}/profile`)}>
           <Settings size={18} strokeWidth={1.5} />
-          Profil & Einstellungen
+          {t('settings')}
         </Link>
         <button
           onClick={handleLogout}
           className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium w-full text-left text-destructive hover:bg-destructive/10 transition-colors"
         >
           <LogOut size={18} strokeWidth={1.5} />
-          Abmelden
+          {t('logout')}
         </button>
       </div>
 

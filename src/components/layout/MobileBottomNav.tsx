@@ -1,0 +1,83 @@
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { LayoutDashboard, BookOpen, Plus, User, HelpCircle } from 'lucide-react'
+
+interface MobileBottomNavProps {
+  locale: string
+  activeVaultId?: string
+  vaults?: { id: string; name: string }[]
+}
+
+export function MobileBottomNav({ locale, activeVaultId, vaults = [] }: MobileBottomNavProps) {
+  const pathname = usePathname()
+  const t = useTranslations('nav')
+
+  const primaryVaultId = activeVaultId ?? vaults[0]?.id
+
+  function isActive(href: string) {
+    return pathname === href || pathname.startsWith(href + '/')
+  }
+
+  const itemClass = (href: string) =>
+    `flex flex-col items-center justify-center gap-0.5 px-2 py-1.5 min-w-[56px] text-[10px] font-medium transition-colors ${
+      isActive(href)
+        ? 'text-primary'
+        : 'text-muted-foreground'
+    }`
+
+  const newEntryHref = primaryVaultId
+    ? `/${locale}/vault/${primaryVaultId}/entries/new`
+    : `/${locale}/vault/create`
+
+  const archiveHref = primaryVaultId
+    ? `/${locale}/vault/${primaryVaultId}`
+    : `/${locale}/dashboard`
+
+  return (
+    <nav
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-t border-border safe-area-bottom"
+      aria-label="Mobile Navigation"
+    >
+      <div className="flex items-end justify-around px-2 pt-1 pb-[max(env(safe-area-inset-bottom),0.375rem)]">
+        {/* Dashboard */}
+        <Link href={`/${locale}/dashboard`} className={itemClass(`/${locale}/dashboard`)}>
+          <LayoutDashboard size={22} strokeWidth={1.5} />
+          <span>{t('dashboard')}</span>
+        </Link>
+
+        {/* Archive */}
+        <Link href={archiveHref} className={itemClass(archiveHref)}>
+          <BookOpen size={22} strokeWidth={1.5} />
+          <span>{t('archive')}</span>
+        </Link>
+
+        {/* Primary Action - Floating FAB style */}
+        <Link
+          href={newEntryHref}
+          className="flex flex-col items-center justify-center gap-0.5 px-2 text-[10px] font-medium"
+          aria-label={t('newEntry')}
+        >
+          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center -mt-5 shadow-lg shadow-primary/30">
+            <Plus size={22} strokeWidth={2.5} className="text-primary-foreground" />
+          </div>
+          <span className="text-primary mt-0.5">{t('newEntry')}</span>
+        </Link>
+
+        {/* Profile */}
+        <Link href={`/${locale}/profile`} className={itemClass(`/${locale}/profile`)}>
+          <User size={22} strokeWidth={1.5} />
+          <span>{t('settings')}</span>
+        </Link>
+
+        {/* Help */}
+        <Link href={`/${locale}/help`} className={itemClass(`/${locale}/help`)}>
+          <HelpCircle size={22} strokeWidth={1.5} />
+          <span>{t('help')}</span>
+        </Link>
+      </div>
+    </nav>
+  )
+}

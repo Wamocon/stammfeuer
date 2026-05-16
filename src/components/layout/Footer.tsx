@@ -1,12 +1,21 @@
-﻿import Link from 'next/link'
+﻿'use client'
+
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 interface FooterProps {
   locale: string
 }
 
+const APP_ROUTES = ['/dashboard', '/vault', '/profile', '/settings']
+
 export function Footer({ locale }: FooterProps) {
   const t = useTranslations('legal')
+  const pathname = usePathname()
+
+  const isAppRoute = APP_ROUTES.some((r) => pathname.includes(r))
+  if (isAppRoute) return null
 
   return (
     <footer className="mt-auto border-t border-border bg-card">
@@ -24,22 +33,13 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Legal Links */}
           <nav className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link
-              href={`/${locale}/legal/impressum`}
-              className="text-gray-500 hover:text-amber-600 dark:text-stone-400 dark:hover:text-amber-400 transition-colors"
-            >
+            <Link href={`/${locale}/legal/impressum`} className="text-muted-foreground hover:text-amber-600 transition-colors">
               {t('impressum')}
             </Link>
-            <Link
-              href={`/${locale}/legal/datenschutz`}
-              className="text-gray-500 hover:text-amber-600 dark:text-stone-400 dark:hover:text-amber-400 transition-colors"
-            >
+            <Link href={`/${locale}/legal/datenschutz`} className="text-muted-foreground hover:text-amber-600 transition-colors">
               {t('privacy')}
             </Link>
-            <Link
-              href={`/${locale}/legal/agb`}
-              className="text-gray-500 hover:text-amber-600 dark:text-stone-400 dark:hover:text-amber-400 transition-colors"
-            >
+            <Link href={`/${locale}/legal/agb`} className="text-muted-foreground hover:text-amber-600 transition-colors">
               {t('terms')}
             </Link>
           </nav>

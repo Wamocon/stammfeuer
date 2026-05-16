@@ -1,6 +1,6 @@
 ﻿'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import type { CategorySlug } from '@/types/database'
@@ -40,6 +40,18 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
   const [activeTab, setActiveTab] = useState<'original' | 'translation'>('original')
   const [saving, setSaving] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
+
+  // Warn before leaving when the form has unsaved content
+  const isDirty = title.trim().length > 0 || body.trim().length > 0
+  useEffect(() => {
+    const handler = (e: BeforeUnloadEvent) => {
+      if (isDirty && !saving) {
+        e.preventDefault()
+      }
+    }
+    window.addEventListener('beforeunload', handler)
+    return () => window.removeEventListener('beforeunload', handler)
+  }, [isDirty, saving])
 
   const validate = () => {
     const errs: Record<string, string> = {}
@@ -177,9 +189,20 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 pt-2">
+      <div className="flex items-center gap-3 pt-2">
         <Button onClick={handleSave} loading={saving}>{t('save')}</Button>
-        <Button variant="ghost" onClick={() => router.back()}>{t('cancel')}</Button>
+        <Button
+          variant="ghost"
+          onClick={() => {
+            if (isDirty && !window.confirm('Änderungen verwerfen? Der Eintrag wird nicht gespeichert.')) return
+            router.back()
+          }}
+        >
+          {t('cancel')}
+        </Button>
+        {isDirty && !saving && (
+          <span className="text-xs text-muted-foreground ml-auto">Nicht gespeichert</span>
+        )}
       </div>
     </div>
   )

@@ -12,7 +12,12 @@
     "help": "Help",
     "login": "Sign in",
     "logout": "Sign out",
-    "register": "Create account"
+    "register": "Create account",
+    "archive": "Archives",
+    "thisVault": "This Archive",
+    "newArchive": "New Archive",
+    "overview": "Overview",
+    "newEntry": "New"
   },
   "auth": {
     "loginTitle": "Welcome back",
@@ -160,7 +165,21 @@
     "timelineGaps": "Timeline gaps",
     "timelineGapsHint": "No stories exist for these years yet.",
     "score": "Completeness",
-    "noEntries": "No entries in the vault yet."
+    "noEntries": "No entries in the vault yet.",
+    "greeting": "Good day, {name}",
+    "archives": "Archives",
+    "entriesCount": "Entries",
+    "membersCount": "Members",
+    "yourArchives": "Your Archives",
+    "openQuestion": "Open Question",
+    "recentlyAdded": "Recently added",
+    "allEntries": "All entries",
+    "createFirstEntry": "Create first entry",
+    "noEntriesMsg": "No entries yet. Start with your first story.",
+    "welcomeTitle": "Welcome to Ahnenecho",
+    "welcomeSubtitle": "Create your first family archive now.",
+    "newArchiveBtn": "Create new archive",
+    "newArchiveLink": "New archive"
   },
   "freemium": {
     "limitReached": "Limit reached",

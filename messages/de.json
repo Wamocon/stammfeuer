@@ -17,7 +17,8 @@
     "thisVault": "Dieses Archiv",
     "newArchive": "Neues Archiv",
     "overview": "Übersicht",
-    "newEntry": "Neu"
+    "newEntry": "Neu",
+    "timeline": "Chronik"
   },
   "auth": {
     "loginTitle": "Willkommen zurück",
@@ -258,6 +259,15 @@
     "deleteAccount": "Konto löschen",
     "deleteAccountConfirm": "Konto wirklich löschen? Alle Daten werden unwiderruflich gelöscht.",
     "deleteAccountButton": "Konto endgültig löschen"
+  },
+  "timeline": {
+    "title": "Chronik",
+    "activity": "Aktivität",
+    "history": "Geschichte",
+    "onBehalfOf": "Im Auftrag von {name}",
+    "noYear": "Zeitraum unbekannt",
+    "noEntries": "Noch keine Einträge vorhanden.",
+    "loadingAlt": "Lädt..."
   },
   "legal": {
     "impressum": "Impressum",

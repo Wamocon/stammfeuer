@@ -50,7 +50,10 @@ export default function RegisterForm({ locale }: { locale: string }) {
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: fullName } },
+      options: {
+        data: { full_name: fullName },
+        emailRedirectTo: `${window.location.origin}/${locale}/auth/confirm-email`,
+      },
     })
     setLoading(false)
     if (error) return setError(t('errors.generic'))

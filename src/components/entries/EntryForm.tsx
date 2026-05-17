@@ -35,7 +35,7 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
   const [lang, setLang] = useState<'de' | 'en'>(locale === 'en' ? 'en' : 'de')
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [metadata, setMetadata] = useState<Record<string, any>>({})
-  const [mediaUrls, setMediaUrls] = useState<string[]>([])
+  const [mediaFiles, setMediaFiles] = useState<{ path: string; url: string }[]>([])
   const [showVoice, setShowVoice] = useState(false)
   const [activeTab, setActiveTab] = useState<'original' | 'translation'>('original')
   const [saving, setSaving] = useState(false)
@@ -76,7 +76,7 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
           category_slug: category,
           lang,
           metadata,
-          media_urls: mediaUrls,
+          media_paths: mediaFiles.map((f) => f.path),
           prompt_id: defaultPromptId ?? null,
         }),
       })
@@ -182,7 +182,7 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
       {/* Media upload */}
       <div>
         <p className="text-sm font-medium text-gray-700 dark:text-stone-300 mb-2">{t('addPhoto')}</p>
-        <MediaUpload vaultId={vaultId} onUploaded={setMediaUrls} />
+        <MediaUpload vaultId={vaultId} onUploaded={setMediaFiles} />
         {errors.description && (
           <p className="text-sm text-red-600 dark:text-red-400 mt-1">{errors.description}</p>
         )}

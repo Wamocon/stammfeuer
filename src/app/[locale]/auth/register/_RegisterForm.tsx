@@ -54,7 +54,11 @@ export default function RegisterForm({ locale }: { locale: string }) {
     const json = await res.json()
     if (!res.ok) {
       setLoading(false)
-      return setError(t('errors.generic'))
+      // Show specific error for duplicate email
+      if (json?.error?.toLowerCase().includes('already') || json?.error?.toLowerCase().includes('exist')) {
+        return setError('Diese E-Mail-Adresse ist bereits registriert.')
+      }
+      return setError(json?.error ?? t('errors.generic'))
     }
     // Sign in immediately since user is already confirmed
     const supabase = createClient()

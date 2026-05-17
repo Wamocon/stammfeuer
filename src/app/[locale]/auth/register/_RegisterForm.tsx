@@ -46,25 +46,23 @@ export default function RegisterForm({ locale }: { locale: string }) {
     if (password !== confirm) return setError('Passwörter stimmen nicht überein.')
     if (password.length < 8) return setError('Passwort muss mindestens 8 Zeichen lang sein.')
     setLoading(true)
-    const supabase = createClient()
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: { full_name: fullName },
-        emailRedirectTo: `${window.location.origin}/${locale}/auth/confirm-email`,
-      },
+    const res = await fetch('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, full_name: fullName }),
     })
-    setLoading(false)
-    if (error) return setError(t('errors.generic'))
-    showToast(t('success.registered'), 'success')
-    // In production, email confirmation is required - show confirm page
-    // Locally (NEXT_PUBLIC_REQUIRE_EMAIL_CONFIRM=false) skip directly to dashboard
-    if (process.env.NEXT_PUBLIC_REQUIRE_EMAIL_CONFIRM === 'true') {
-      router.push(`/${locale}/auth/confirm-email`)
-    } else {
-      router.push(`/${locale}/dashboard`)
+    const json = await res.json()
+    if (!res.ok) {
+      setLoading(false)
+      return setError(t('errors.generic'))
     }
+    // Sign in immediately since user is already confirmed
+    const supabase = createClient()
+    const { error: signInError } = await supabase.auth.signInWithPassword({ email, password })
+    setLoading(false)
+    if (signInError) return setError(t('errors.generic'))
+    showToast(t('success.registered'), 'success')
+    router.push(`/${locale}/dashboard`)
   }
 
   return (

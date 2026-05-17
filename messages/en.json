@@ -17,7 +17,8 @@
     "thisVault": "This Archive",
     "newArchive": "New Archive",
     "overview": "Overview",
-    "newEntry": "New"
+    "newEntry": "New",
+    "timeline": "Chronicle"
   },
   "auth": {
     "loginTitle": "Welcome back",
@@ -258,6 +259,15 @@
     "deleteAccount": "Delete account",
     "deleteAccountConfirm": "Really delete your account? All data will be permanently deleted.",
     "deleteAccountButton": "Permanently delete account"
+  },
+  "timeline": {
+    "title": "Chronicle",
+    "activity": "Activity",
+    "history": "History",
+    "onBehalfOf": "On behalf of {name}",
+    "noYear": "Date unknown",
+    "noEntries": "No entries yet.",
+    "loadingAlt": "Loading..."
   },
   "legal": {
     "impressum": "Legal notice",

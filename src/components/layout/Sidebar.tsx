@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import { LayoutDashboard, BookOpen, Settings, HelpCircle, LogOut, ChevronDown, ChevronRight, PlusCircle, GitBranch } from 'lucide-react'
+import { LayoutDashboard, BookOpen, Settings, HelpCircle, LogOut, ChevronDown, ChevronRight, PlusCircle, GitBranch, Clock } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { useState } from 'react'
 import { Avatar } from '@/components/ui/Avatar'
@@ -49,6 +49,7 @@ export function Sidebar({ locale, vaults = [], activeVaultId, userName, userAvat
     ? [
         { href: `/${locale}/vault/${activeVaultId}`, icon: BookOpen, label: t('overview') },
         { href: `/${locale}/vault/${activeVaultId}/entries`, icon: BookOpen, label: t('entries') },
+        { href: `/${locale}/vault/${activeVaultId}/timeline`, icon: Clock, label: t('timeline') },
         { href: `/${locale}/vault/${activeVaultId}/family`, icon: GitBranch, label: t('familyTree') },
         { href: `/${locale}/vault/${activeVaultId}/settings`, icon: Settings, label: t('settings') },
       ]

@@ -60,7 +60,7 @@ create trigger on_auth_user_created
 -- Each vault is a family's knowledge archive
 -- =============================================================================
 create table public.vaults (
-  id            uuid primary key default uuid_generate_v4(),
+  id            uuid primary key default gen_random_uuid(),
   name          text not null,
   description   text,
   cover_url     text,
@@ -112,7 +112,7 @@ create policy "Owner can delete vault"
 -- Roles: initiator (owner/admin), contributor (read+write), reader (read only)
 -- =============================================================================
 create table public.vault_members (
-  id            uuid primary key default uuid_generate_v4(),
+  id            uuid primary key default gen_random_uuid(),
   vault_id      uuid not null references public.vaults(id) on delete cascade,
   user_id       uuid references public.profiles(id) on delete set null,
   role          text not null check (role in ('initiator', 'contributor', 'reader')),
@@ -181,7 +181,7 @@ create trigger on_vault_created
 -- 6 knowledge categories per vault (seeded on vault creation)
 -- =============================================================================
 create table public.categories (
-  id            uuid primary key default uuid_generate_v4(),
+  id            uuid primary key default gen_random_uuid(),
   vault_id      uuid not null references public.vaults(id) on delete cascade,
   slug          text not null check (slug in (
                   'stories', 'recipes', 'traditions', 'wisdom', 'places', 'photos'
@@ -230,7 +230,7 @@ create trigger on_vault_categories
 -- The core content unit - one entry per story/recipe/tradition/etc.
 -- =============================================================================
 create table public.entries (
-  id              uuid primary key default uuid_generate_v4(),
+  id              uuid primary key default gen_random_uuid(),
   vault_id        uuid not null references public.vaults(id) on delete cascade,
   category_slug   text not null check (category_slug in (
                     'stories', 'recipes', 'traditions', 'wisdom', 'places', 'photos'
@@ -306,7 +306,7 @@ create policy "Author or initiator can soft-delete entries"
 -- Files attached to an entry (photos, audio recordings)
 -- =============================================================================
 create table public.entry_media (
-  id          uuid primary key default uuid_generate_v4(),
+  id          uuid primary key default gen_random_uuid(),
   entry_id    uuid not null references public.entries(id) on delete cascade,
   vault_id    uuid not null references public.vaults(id) on delete cascade,
   uploader_id uuid references public.profiles(id) on delete set null,
@@ -347,7 +347,7 @@ create policy "Uploader or initiator can delete media"
 -- Static prompt library + per-member prompt assignments
 -- =============================================================================
 create table public.prompt_library (
-  id            uuid primary key default uuid_generate_v4(),
+  id            uuid primary key default gen_random_uuid(),
   category_slug text not null,
   life_phase    text not null check (life_phase in ('childhood', 'youth', 'adulthood', 'senior', 'any')),
   text_de       text not null,
@@ -363,7 +363,7 @@ create policy "Anyone authenticated can read prompt library"
   using (auth.uid() is not null);
 
 create table public.member_prompts (
-  id              uuid primary key default uuid_generate_v4(),
+  id              uuid primary key default gen_random_uuid(),
   vault_id        uuid not null references public.vaults(id) on delete cascade,
   member_id       uuid not null references public.vault_members(id) on delete cascade,
   prompt_id       uuid references public.prompt_library(id) on delete set null,
@@ -399,7 +399,7 @@ create policy "Initiators can manage prompts"
 -- In-app notification system
 -- =============================================================================
 create table public.notifications (
-  id          uuid primary key default uuid_generate_v4(),
+  id          uuid primary key default gen_random_uuid(),
   user_id     uuid not null references public.profiles(id) on delete cascade,
   vault_id    uuid references public.vaults(id) on delete cascade,
   type        text not null check (type in (
@@ -431,7 +431,7 @@ create policy "Users can mark own notifications as read"
 -- Track plan per vault (Stripe webhook will update this)
 -- =============================================================================
 create table public.subscriptions (
-  id                  uuid primary key default uuid_generate_v4(),
+  id                  uuid primary key default gen_random_uuid(),
   vault_id            uuid not null unique references public.vaults(id) on delete cascade,
   plan                text not null default 'free' check (plan in ('free', 'pro', 'family_plus')),
   stripe_customer_id  text,

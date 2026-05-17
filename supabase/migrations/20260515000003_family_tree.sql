@@ -9,7 +9,7 @@
 -- Optionally linked to a vault_member once they join the app.
 -- =============================================================================
 create table public.family_persons (
-  id          uuid primary key default uuid_generate_v4(),
+  id          uuid primary key default gen_random_uuid(),
   vault_id    uuid not null references public.vaults(id) on delete cascade,
   -- Optional link to a vault member (set when the person has an app account)
   member_id   uuid references public.vault_members(id) on delete set null,
@@ -55,7 +55,7 @@ create policy "Initiators can delete family persons"
 --   'partner'       -> person_a and person_b are partners/spouses
 -- =============================================================================
 create table public.family_relationships (
-  id                uuid primary key default uuid_generate_v4(),
+  id                uuid primary key default gen_random_uuid(),
   vault_id          uuid not null references public.vaults(id) on delete cascade,
   person_a_id       uuid not null references public.family_persons(id) on delete cascade,
   person_b_id       uuid not null references public.family_persons(id) on delete cascade,

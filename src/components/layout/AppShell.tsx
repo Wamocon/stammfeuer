@@ -70,8 +70,8 @@ export function AppShell({ locale, children }: AppShellProps) {
           userName={userName}
           userAvatarUrl={userAvatarUrl}
         />
-        {/* pb-20 on mobile to avoid content hiding behind the fixed bottom nav */}
-        <main className="flex-1 overflow-auto pb-20 lg:pb-0">
+        {/* pb-20 on mobile (global nav only), pb-32 when vault sub-nav is visible too */}
+        <main className={`flex-1 overflow-auto lg:pb-0 ${activeVaultId ? 'pb-32' : 'pb-20'}`}>
           {children}
         </main>
       </div>

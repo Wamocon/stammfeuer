@@ -9,6 +9,7 @@ import {
   applyNodeChanges,
   applyEdgeChanges,
   MarkerType,
+  ConnectionMode,
   type Edge,
   type NodeChange,
   type EdgeChange,
@@ -265,6 +266,7 @@ export function FamilyTree({
           maxZoom={2}
           deleteKeyCode={canEdit ? 'Delete' : null}
           nodesConnectable={false}
+          connectionMode={ConnectionMode.Loose}
           proOptions={{ hideAttribution: true }}
           className="bg-stone-50 dark:bg-stone-950"
         >

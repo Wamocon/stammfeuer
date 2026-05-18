@@ -122,6 +122,8 @@
     "photoDescription": "Description (required)",
     "photoDescriptionPlaceholder": "Who is in the photo? What is shown?",
     "save": "Save",
+    "update": "Save changes",
+    "edit": "Edit entry",
     "cancel": "Cancel",
     "delete": "Delete",
     "deleteConfirm": "Really delete this entry?",

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { BookOpen, ChevronRight, Search, X, ChevronDown, Printer } from 'lucide-react'
+import { BookOpen, ChevronRight, Search, X, ChevronDown, Printer, Download } from 'lucide-react'
 import type { Chapter } from './_chapters'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -46,6 +46,7 @@ const labels = {
     version: 'Version 1.0 — Ahnenecho by WAMOCON GmbH',
     contact: 'Fragen? Schreib uns:',
     print: 'Drucken',
+    download: 'Als PDF herunterladen',
     showToc: 'Inhaltsverzeichnis anzeigen',
   },
   en: {
@@ -59,6 +60,7 @@ const labels = {
     version: 'Version 1.0 — Ahnenecho by WAMOCON GmbH',
     contact: 'Questions? Write us:',
     print: 'Print',
+    download: 'Download as PDF',
     showToc: 'Show table of contents',
   },
 }
@@ -306,13 +308,23 @@ export function HandbuchClient({ chapters, locale }: Props) {
                 </a>
               </p>
             </div>
-            <button
-              onClick={() => window.print()}
-              className="flex items-center gap-2 text-sm text-muted-foreground border border-border rounded-lg px-4 py-2 hover:bg-muted transition-colors print:hidden"
-            >
-              <Printer size={14} />
-              {l.print}
-            </button>
+            <div className="flex items-center gap-2 print:hidden">
+              <a
+                href={`/api/handbuch/pdf?locale=${locale}`}
+                download
+                className="flex items-center gap-2 text-sm text-white bg-amber-600 hover:bg-amber-700 rounded-lg px-4 py-2 transition-colors"
+              >
+                <Download size={14} />
+                {l.download}
+              </a>
+              <button
+                onClick={() => window.print()}
+                className="flex items-center gap-2 text-sm text-muted-foreground border border-border rounded-lg px-4 py-2 hover:bg-muted transition-colors"
+              >
+                <Printer size={14} />
+                {l.print}
+              </button>
+            </div>
           </div>
         </div>
       </div>

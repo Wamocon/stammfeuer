@@ -19,22 +19,33 @@ interface EntryFormProps {
   locale: string
   defaultCategory?: CategorySlug
   defaultPromptId?: string
+  // Edit mode
+  entryId?: string
+  initialData?: {
+    title: string
+    body: string
+    category_slug: CategorySlug
+    lang: 'de' | 'en'
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    metadata: Record<string, any>
+  }
 }
 
 const CATEGORIES: CategorySlug[] = ['stories', 'recipes', 'traditions', 'wisdom', 'places', 'photos']
 
-export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }: EntryFormProps) {
+export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId, entryId, initialData }: EntryFormProps) {
   const t = useTranslations('entries')
   const tCat = useTranslations('categories')
   const { showToast } = useToast()
   const router = useRouter()
+  const isEdit = !!entryId && !!initialData
 
-  const [title, setTitle] = useState('')
-  const [body, setBody] = useState('')
-  const [category, setCategory] = useState<CategorySlug>(defaultCategory ?? 'stories')
-  const [lang, setLang] = useState<'de' | 'en'>(locale === 'en' ? 'en' : 'de')
+  const [title, setTitle] = useState(initialData?.title ?? '')
+  const [body, setBody] = useState(initialData?.body ?? '')
+  const [category, setCategory] = useState<CategorySlug>(initialData?.category_slug ?? defaultCategory ?? 'stories')
+  const [lang, setLang] = useState<'de' | 'en'>(initialData?.lang ?? (locale === 'en' ? 'en' : 'de'))
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [metadata, setMetadata] = useState<Record<string, any>>({})
+  const [metadata, setMetadata] = useState<Record<string, any>>(initialData?.metadata ?? {})
   const [mediaFiles, setMediaFiles] = useState<{ path: string; url: string }[]>([])
   const [showVoice, setShowVoice] = useState(false)
   const [activeTab, setActiveTab] = useState<'original' | 'translation'>('original')
@@ -67,8 +78,12 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
     if (!validate()) return
     setSaving(true)
     try {
-      const res = await fetch(`/api/vaults/${vaultId}/entries`, {
-        method: 'POST',
+      const url = isEdit
+        ? `/api/vaults/${vaultId}/entries/${entryId}`
+        : `/api/vaults/${vaultId}/entries`
+      const method = isEdit ? 'PATCH' : 'POST'
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: title.trim(),
@@ -77,12 +92,12 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
           lang,
           metadata,
           media_paths: mediaFiles.map((f) => f.path),
-          prompt_id: defaultPromptId ?? null,
+          ...(isEdit ? {} : { prompt_id: defaultPromptId ?? null }),
         }),
       })
       if (!res.ok) throw new Error()
       const { entry } = await res.json()
-      showToast('Eintrag gespeichert!', 'success')
+      showToast(isEdit ? 'Eintrag aktualisiert!' : 'Eintrag gespeichert!', 'success')
       router.push(`/${locale}/vault/${vaultId}/entries/${entry.id}`)
     } catch {
       showToast(t('errors.saveFailed'), 'error')
@@ -190,7 +205,7 @@ export function EntryForm({ vaultId, locale, defaultCategory, defaultPromptId }:
 
       {/* Actions */}
       <div className="flex items-center gap-3 pt-2">
-        <Button onClick={handleSave} loading={saving}>{t('save')}</Button>
+        <Button onClick={handleSave} loading={saving}>{isEdit ? t('update') : t('save')}</Button>
         <Button
           variant="ghost"
           onClick={() => {

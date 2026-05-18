@@ -122,6 +122,8 @@
     "photoDescription": "Beschreibung (Pflicht)",
     "photoDescriptionPlaceholder": "Wer ist auf dem Foto? Was ist zu sehen?",
     "save": "Speichern",
+    "update": "Änderungen speichern",
+    "edit": "Eintrag bearbeiten",
     "cancel": "Abbrechen",
     "delete": "Löschen",
     "deleteConfirm": "Eintrag wirklich löschen?",

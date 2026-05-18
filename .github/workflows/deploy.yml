@@ -87,4 +87,4 @@ jobs:
           export GITHUB_REPOSITORY=""
           PROD_FLAG=""
           [[ "${{ inputs.environment }}" == "production" ]] && PROD_FLAG="--prod"
-          vercel deploy --prebuilt $PROD_FLAG --yes --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --archive=tgz $PROD_FLAG --yes --token=${{ secrets.VERCEL_TOKEN }}

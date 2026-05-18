@@ -49,6 +49,7 @@ function FamilyPersonNodeInner({ data }: NodeProps<FamilyPersonNodeType>) {
     >
       {/* Top handle - incoming from parent */}
       <Handle
+        id="top"
         type="target"
         position={Position.Top}
         className="!bg-amber-400 !w-3 !h-3 !border-2 !border-white dark:!border-stone-800"
@@ -124,18 +125,20 @@ function FamilyPersonNodeInner({ data }: NodeProps<FamilyPersonNodeType>) {
 
       {/* Bottom handle - outgoing to children */}
       <Handle
+        id="bottom"
         type="source"
         position={Position.Bottom}
         className="!bg-amber-400 !w-3 !h-3 !border-2 !border-white dark:!border-stone-800"
       />
 
-      {/* Left handle - for partner connections */}
+      {/* Left handle - for incoming partner connections (target) */}
       <Handle
         id="left"
-        type="source"
+        type="target"
         position={Position.Left}
         className="!bg-rose-400 !w-2.5 !h-2.5 !border-2 !border-white dark:!border-stone-800"
       />
+      {/* Right handle - for outgoing partner connections (source) */}
       <Handle
         id="right"
         type="source"

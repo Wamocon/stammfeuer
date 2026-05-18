@@ -9,7 +9,7 @@ import { LoadingSpinner } from '@/components/ui/LoadingSpinner'
 
 interface MediaUploadProps {
   vaultId: string
-  onUploaded: (urls: string[]) => void
+  onUploaded: (files: { path: string; url: string }[]) => void
 }
 
 interface UploadedFile {
@@ -44,7 +44,7 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
 
     const updated = [...files, ...newFiles]
     setFiles(updated)
-    onUploaded(updated.map((f) => f.url))
+    onUploaded(updated.map((f) => ({ path: f.path, url: f.url })))
     setUploading(false)
   }
 
@@ -54,7 +54,7 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
     await supabase.storage.from('vault-media').remove([file.path])
     const updated = files.filter((_, i) => i !== index)
     setFiles(updated)
-    onUploaded(updated.map((f) => f.url))
+    onUploaded(updated.map((f) => ({ path: f.path, url: f.url })))
   }
 
   return (

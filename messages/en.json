@@ -144,6 +144,7 @@
   "prompts": {
     "thisWeek": "Question of the week",
     "answerNow": "Answer now",
+    "byVoice": "By voice",
     "skip": "Skip",
     "noPrompt": "No active question.",
     "browse": "Browse more questions",

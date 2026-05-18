@@ -28,7 +28,11 @@ export default function LoginForm({ locale }: { locale: string }) {
     const supabase = createClient()
 
     if (magicMode) {
-      const { error } = await supabase.auth.signInWithOtp({ email })
+      const redirectTo = `${window.location.origin}/auth/callback?next=/${locale}/dashboard`
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: { emailRedirectTo: redirectTo },
+      })
       setLoading(false)
       if (error) return setError(t('errors.generic'))
       showToast(t('success.magicLinkSent'), 'success')

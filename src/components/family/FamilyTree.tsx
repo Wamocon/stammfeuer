@@ -6,13 +6,14 @@ import {
   Background,
   Controls,
   MiniMap,
-  applyNodeChanges,
   applyEdgeChanges,
   MarkerType,
+  ConnectionMode,
   type Edge,
   type NodeChange,
   type EdgeChange,
   BackgroundVariant,
+  useNodesState,
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 
@@ -71,8 +72,8 @@ function relationshipsToEdges(relationships: FamilyRelationship[]): Edge[] {
       id: r.id,
       source: r.person_a_id,
       target: r.person_b_id,
-      sourceHandle: isPartner ? 'right' : undefined,
-      targetHandle: isPartner ? 'left' : undefined,
+      sourceHandle: isPartner ? 'right' : 'bottom',
+      targetHandle: isPartner ? 'left' : 'top',
       type: isPartner ? 'straight' : 'smoothstep',
       animated: isPartner,
       label: isPartner ? '❤' : undefined,
@@ -137,12 +138,13 @@ export function FamilyTree({
   )
 
   // ---------------------------------------------------------------------------
-  // React Flow nodes / edges (derived from state)
+  // React Flow nodes / edges - managed via useNodesState so React Flow can
+  // track internal state (positionAbsolute, measured dims) and avoid the
+  // "node not initialized" drag warning.
   // ---------------------------------------------------------------------------
-  const nodes = useMemo(
-    () => personsToNodes(persons, currentUserId, canEdit, handlers),
-    [persons, currentUserId, canEdit, handlers],
-  )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const initialNodes = useMemo(() => personsToNodes(initialPersons, currentUserId, canEdit, handlers), [])
+  const [nodes, setNodes, onRFNodesChange] = useNodesState<FamilyPersonNodeType>(initialNodes)
 
   const edges = useMemo(() => relationshipsToEdges(relationships), [relationships])
 
@@ -151,34 +153,38 @@ export function FamilyTree({
   // ---------------------------------------------------------------------------
   const onNodesChange = useCallback(
     (changes: NodeChange<FamilyPersonNodeType>[]) => {
-      const posChanges = changes.filter((c) => c.type === 'position' && c.dragging === false)
+      // Let React Flow manage its own internal node state (positionAbsolute etc.)
+      onRFNodesChange(changes)
 
-      setPersons((prev) => {
-        const currentNodes = personsToNodes(prev, currentUserId, canEdit, handlers)
-        const updated = applyNodeChanges(changes, currentNodes)
-        return updated.map((n) => {
-          const existing = prev.find((p) => p.id === n.id)!
-          return { ...existing, pos_x: n.position.x, pos_y: n.position.y }
-        })
-      })
+      // Only persist when drag has ended (dragging === false)
+      const posChanges = changes.filter(
+        (c) => c.type === 'position' && (c as { dragging?: boolean }).dragging === false &&
+          (c as { position?: { x: number; y: number } }).position !== undefined,
+      ) as Array<{ type: 'position'; id: string; position: { x: number; y: number } }>
+
+      if (posChanges.length === 0) return
+
+      setPersons((prev) =>
+        prev.map((p) => {
+          const change = posChanges.find((c) => c.id === p.id)
+          return change ? { ...p, pos_x: change.position.x, pos_y: change.position.y } : p
+        }),
+      )
 
       // Persist position changes to server with debounce
-      if (posChanges.length > 0) {
-        if (posTimer) clearTimeout(posTimer)
-        const timer = setTimeout(async () => {
-          for (const change of posChanges) {
-            if (change.type !== 'position') continue
-            await fetch(`/api/vaults/${vaultId}/family/${change.id}`, {
-              method: 'PUT',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ pos_x: change.position?.x ?? 0, pos_y: change.position?.y ?? 0 }),
-            })
-          }
-        }, 600)
-        setPosTimer(timer)
-      }
+      if (posTimer) clearTimeout(posTimer)
+      const timer = setTimeout(async () => {
+        for (const change of posChanges) {
+          await fetch(`/api/vaults/${vaultId}/family/${change.id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pos_x: change.position.x, pos_y: change.position.y }),
+          })
+        }
+      }, 600)
+      setPosTimer(timer)
     },
-    [currentUserId, canEdit, handlers, vaultId, posTimer],
+    [onRFNodesChange, posTimer, vaultId],
   )
 
   const onEdgesChange = useCallback(
@@ -206,6 +212,7 @@ export function FamilyTree({
   async function handleAutoLayout() {
     const laid = autoLayout(persons)
     setPersons(laid)
+    setNodes(personsToNodes(laid, currentUserId, canEdit, handlers))
     // Persist all positions
     await Promise.all(
       laid.map((p) =>
@@ -265,6 +272,7 @@ export function FamilyTree({
           maxZoom={2}
           deleteKeyCode={canEdit ? 'Delete' : null}
           nodesConnectable={false}
+          connectionMode={ConnectionMode.Loose}
           proOptions={{ hideAttribution: true }}
           className="bg-stone-50 dark:bg-stone-950"
         >
@@ -294,7 +302,10 @@ export function FamilyTree({
         open={showAddPerson}
         onClose={() => setShowAddPerson(false)}
         vaultId={vaultId}
-        onSaved={(p) => setPersons((prev) => [...prev, p])}
+        onSaved={(p) => {
+          setPersons((prev) => [...prev, p])
+          setNodes((prev) => [...prev, personsToNodes([p], currentUserId, canEdit, handlers)[0]])
+        }}
       />
 
       <PersonFormModal
@@ -302,11 +313,13 @@ export function FamilyTree({
         onClose={() => setEditPerson(null)}
         vaultId={vaultId}
         person={editPerson}
-        onSaved={(updated) =>
+        onSaved={(updated) => {
           setPersons((prev) => prev.map((p) => (p.id === updated.id ? updated : p)))
-        }
+          setNodes((prev) => prev.map((n) => n.id !== updated.id ? n : { ...n, data: { ...n.data, person: updated } }))
+        }}
         onDeleted={(id) => {
           setPersons((prev) => prev.filter((p) => p.id !== id))
+          setNodes((prev) => prev.filter((n) => n.id !== id))
           setRelationships((prev) =>
             prev.filter((r) => r.person_a_id !== id && r.person_b_id !== id),
           )
@@ -319,9 +332,10 @@ export function FamilyTree({
         vaultId={vaultId}
         person={linkUserPerson}
         members={members}
-        onLinked={(updated) =>
+        onLinked={(updated) => {
           setPersons((prev) => prev.map((p) => (p.id === updated.id ? updated : p)))
-        }
+          setNodes((prev) => prev.map((n) => n.id !== updated.id ? n : { ...n, data: { ...n.data, person: updated } }))
+        }}
       />
 
       <AddRelationshipModal

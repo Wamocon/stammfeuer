@@ -121,7 +121,7 @@ export async function POST(request: Request, { params }: RouteParams) {
   }
 
   const body = await request.json()
-  const { title, body: entryBody, category_slug, lang, metadata, on_behalf_of } = body
+  const { title, body: entryBody, category_slug, lang, metadata, on_behalf_of, media_paths } = body
 
   if (!title?.trim()) {
     return NextResponse.json({ error: 'Title is required.' }, { status: 400 })
@@ -149,6 +149,26 @@ export async function POST(request: Request, { params }: RouteParams) {
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 })
+  }
+
+  // Save uploaded media files to entry_media table
+  if (Array.isArray(media_paths) && media_paths.length > 0 && data) {
+    const extToMime: Record<string, string> = {
+      jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png',
+      gif: 'image/gif', webp: 'image/webp', heic: 'image/heic',
+    }
+    const mediaRows = media_paths.map((storage_path: string, idx: number) => {
+      const ext = storage_path.split('.').pop()?.toLowerCase() ?? 'jpg'
+      return {
+        entry_id: data.id,
+        vault_id: vaultId,
+        uploader_id: user.id,
+        storage_path,
+        mime_type: extToMime[ext] ?? 'image/jpeg',
+        sort_order: idx,
+      }
+    })
+    await supabase.from('entry_media').insert(mediaRows)
   }
 
   return NextResponse.json({ entry: data }, { status: 201 })

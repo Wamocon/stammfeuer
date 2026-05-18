@@ -43,6 +43,13 @@ export default async function EntryPage({ params }: EntryPageProps) {
   if (!entryRaw) notFound()
 
   const entry = entryRaw as Entry
+
+  // Compute public URLs for media (storage_path → public URL)
+  const mediaWithUrls = (entry.media ?? []).map((m) => {
+    const { data: urlData } = supabase.storage.from('vault-media').getPublicUrl(m.storage_path)
+    return { ...m, public_url: urlData.publicUrl }
+  })
+
   const canEdit =
     membership?.role === 'initiator' ||
     membership?.role === 'contributor' ||
@@ -98,9 +105,9 @@ export default async function EntryPage({ params }: EntryPageProps) {
       )}
 
       {/* Media */}
-      {entry.media && entry.media.length > 0 && (
+      {mediaWithUrls.length > 0 && (
         <div className="grid grid-cols-2 gap-3">
-          {entry.media.map((m) => (
+          {mediaWithUrls.map((m) => (
             m.public_url && (
               // eslint-disable-next-line @next/next/no-img-element
               <img

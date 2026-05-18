@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { HelpCircle, Mail, MessageSquare, BookOpen } from 'lucide-react'
 
-export default function HelpPage() {
+interface HelpPageProps {
+  params: Promise<{ locale: string }>
+}
+
+export default async function HelpPage({ params }: HelpPageProps) {
+  const { locale } = await params
   const faqs = [
     {
       q: 'Was ist Ahnenecho?',
@@ -63,7 +68,7 @@ export default function HelpPage() {
       {/* Quick links */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
-          { Icon: BookOpen, label: 'Produkthandbuch', href: 'handbuch' },
+          { Icon: BookOpen, label: 'Produkthandbuch', href: `/${locale}/help/handbuch` },
           { Icon: MessageSquare, label: 'FAQ', href: '#faq' },
           { Icon: Mail, label: 'Kontakt', href: 'mailto:info@ahnenecho.app' },
         ].map(({ Icon, label, href }) => (

@@ -46,7 +46,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Company stamp */}
           <div className="text-xs text-muted-foreground text-center md:text-right">
-            <p>© {new Date().getFullYear()} WAMOCON UG (haftungsbeschränkt)</p>
+            <p>© {new Date().getFullYear()} WAMOCON GmbH</p>
             <p>Alle Rechte vorbehalten.</p>
           </div>
         </div>

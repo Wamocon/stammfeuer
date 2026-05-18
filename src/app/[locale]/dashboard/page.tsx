@@ -96,6 +96,7 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
   }
 
   const t = await getTranslations('dashboard')
+  const tPrompts = await getTranslations('prompts')
 
   const displayName = (user.user_metadata?.full_name as string | undefined)?.split(' ')[0] ?? 'Familie'
   const totalEntries = vaults.reduce((sum, v) => sum + v.entry_count, 0)
@@ -204,7 +205,17 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
         {/* Prompt widget */}
         <div>
           <h2 className="text-base font-semibold text-foreground mb-3">{t('openQuestion')}</h2>
-          <PromptWidget prompt={prompt} locale={locale} vaultId={primaryVault?.id ?? ''} />
+          <PromptWidget
+            prompt={prompt}
+            locale={locale}
+            vaultId={primaryVault?.id ?? ''}
+            t={{
+              thisWeek: tPrompts('thisWeek'),
+              noPrompt: tPrompts('noPrompt'),
+              answerNow: tPrompts('answerNow'),
+              byVoice: tPrompts('byVoice'),
+            }}
+          />
         </div>
       </div>
 

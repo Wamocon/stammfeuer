@@ -33,13 +33,20 @@ export function MediaUpload({ vaultId, onUploaded }: MediaUploadProps) {
     for (const file of Array.from(fileList)) {
       if (!file.type.startsWith('image/')) continue
       const path = `${vaultId}/${Date.now()}-${file.name}`
-      const { error } = await supabase.storage.from('vault-media').upload(path, file)
-      if (error) {
-        showToast(error.message, 'error')
+      const { error: uploadError } = await supabase.storage.from('vault-media').upload(path, file)
+      if (uploadError) {
+        showToast(uploadError.message, 'error')
         continue
       }
-      const { data } = supabase.storage.from('vault-media').getPublicUrl(path)
-      newFiles.push({ path, url: data.publicUrl, name: file.name })
+      // Private bucket: use signed URL (1 hour) for upload preview
+      const { data: signedData, error: signedError } = await supabase.storage
+        .from('vault-media')
+        .createSignedUrl(path, 3600)
+      if (signedError || !signedData) {
+        showToast(signedError?.message ?? 'Vorschau konnte nicht geladen werden', 'error')
+        continue
+      }
+      newFiles.push({ path, url: signedData.signedUrl, name: file.name })
     }
 
     const updated = [...files, ...newFiles]

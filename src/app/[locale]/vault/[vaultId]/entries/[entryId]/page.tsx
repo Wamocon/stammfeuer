@@ -44,11 +44,15 @@ export default async function EntryPage({ params }: EntryPageProps) {
 
   const entry = entryRaw as Entry
 
-  // Compute public URLs for media (storage_path → public URL)
-  const mediaWithUrls = (entry.media ?? []).map((m) => {
-    const { data: urlData } = supabase.storage.from('vault-media').getPublicUrl(m.storage_path)
-    return { ...m, public_url: urlData.publicUrl }
-  })
+  // Generate signed URLs for media (private bucket, 1 hour expiry)
+  const mediaWithUrls = await Promise.all(
+    (entry.media ?? []).map(async (m) => {
+      const { data } = await supabase.storage
+        .from('vault-media')
+        .createSignedUrl(m.storage_path, 3600)
+      return { ...m, public_url: data?.signedUrl ?? null }
+    })
+  )
 
   const canEdit =
     membership?.role === 'initiator' ||

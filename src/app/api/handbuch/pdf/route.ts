@@ -1,7 +1,6 @@
 // src/app/api/handbuch/pdf/route.ts
 // GET /api/handbuch/pdf?locale=de|en  - generate and stream the handbook as PDF
 
-import { NextResponse } from 'next/server'
 import PDFDocument from 'pdfkit'
 import { getChapters } from '@/app/[locale]/help/handbuch/_chapters'
 
@@ -99,12 +98,15 @@ export async function GET(request: Request) {
 
   const filename = locale === 'de' ? 'Ahnenecho-Handbuch.pdf' : 'Ahnenecho-Handbook.pdf'
 
-  return new NextResponse(new Uint8Array(pdf), {
+  // Use Uint8Array copy so the browser receives clean binary PDF data (not text)
+  const bytes = new Uint8Array(pdf)
+
+  return new Response(bytes, {
     status: 200,
     headers: {
       'Content-Type': 'application/pdf',
       'Content-Disposition': `attachment; filename="${filename}"`,
-      'Content-Length': String(pdf.length),
+      'Content-Length': String(bytes.length),
       'Cache-Control': 'public, max-age=3600',
     },
   })

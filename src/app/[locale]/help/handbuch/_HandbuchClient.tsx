@@ -5,6 +5,110 @@ import Link from 'next/link'
 import { BookOpen, ChevronRight, Search, X, ChevronDown, Printer, Download } from 'lucide-react'
 import type { Chapter } from './_chapters'
 
+// ─── Client-side PDF generation ───────────────────────────────────────────────
+
+async function downloadPDF(chapters: Chapter[], locale: string) {
+  const { default: jsPDF } = await import('jspdf')
+
+  const doc = new jsPDF({ unit: 'mm', format: 'a4' })
+  const pageW = doc.internal.pageSize.getWidth()
+  const pageH = doc.internal.pageSize.getHeight()
+  const margin = 20
+  const contentW = pageW - margin * 2
+  const appName = 'Ahnenecho'
+  const subtitle = locale === 'de' ? 'Produkthandbuch' : 'Product Handbook'
+
+  let y = margin + 20
+
+  // ── Cover ──────────────────────────────────────────────────────────────────
+  doc.setFont('helvetica', 'bold')
+  doc.setFontSize(28)
+  doc.setTextColor(146, 64, 14) // amber-800
+  doc.text(appName, pageW / 2, y, { align: 'center' })
+  y += 12
+
+  doc.setFont('helvetica', 'normal')
+  doc.setFontSize(16)
+  doc.setTextColor(28, 25, 23) // stone-900
+  doc.text(subtitle, pageW / 2, y, { align: 'center' })
+  y += 8
+
+  doc.setFontSize(10)
+  doc.setTextColor(120, 113, 108) // stone-500
+  doc.text(
+    new Date().toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-GB', {
+      day: 'numeric', month: 'long', year: 'numeric',
+    }),
+    pageW / 2, y, { align: 'center' },
+  )
+  y += 6
+  doc.text('ahnenecho.eu', pageW / 2, y, { align: 'center' })
+
+  // ── Chapters ───────────────────────────────────────────────────────────────
+  for (let ci = 0; ci < chapters.length; ci++) {
+    const chapter = chapters[ci]
+    doc.addPage()
+    y = margin
+
+    // Chapter title
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(16)
+    doc.setTextColor(146, 64, 14)
+    doc.text(`${ci + 1}. ${chapter.title}`, margin, y)
+    y += 2
+
+    // Divider line
+    doc.setDrawColor(217, 119, 6) // amber-600
+    doc.setLineWidth(0.5)
+    doc.line(margin, y + 1, pageW - margin, y + 1)
+    y += 8
+
+    for (const section of chapter.sections) {
+      // Section heading
+      if (y > pageH - 30) { doc.addPage(); y = margin }
+      doc.setFont('helvetica', 'bold')
+      doc.setFontSize(12)
+      doc.setTextColor(28, 25, 23)
+      doc.text(section.title, margin, y)
+      y += 6
+
+      // Section content
+      doc.setFont('helvetica', 'normal')
+      doc.setFontSize(10)
+      doc.setTextColor(68, 64, 60) // stone-600
+
+      const paragraphs = section.content.split(/\n\n+/).map((p) => p.trim()).filter(Boolean)
+      for (const para of paragraphs) {
+        const lines = doc.splitTextToSize(para, contentW) as string[]
+        for (const line of lines) {
+          if (y > pageH - 20) { doc.addPage(); y = margin }
+          doc.text(line, margin, y)
+          y += 5
+        }
+        y += 2
+      }
+
+      y += 4
+    }
+  }
+
+  // ── Page numbers ───────────────────────────────────────────────────────────
+  const totalPages = (doc.internal as unknown as { getNumberOfPages: () => number }).getNumberOfPages()
+  for (let i = 1; i <= totalPages; i++) {
+    doc.setPage(i)
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(8)
+    doc.setTextColor(168, 162, 158) // stone-400
+    doc.text(
+      `${appName} ${subtitle}  ·  ${i} / ${totalPages}`,
+      pageW / 2, pageH - 8, { align: 'center' },
+    )
+  }
+
+  const filename = locale === 'de' ? 'Ahnenecho-Handbuch.pdf' : 'Ahnenecho-Handbook.pdf'
+  doc.save(filename)
+}
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface Props {
@@ -309,14 +413,13 @@ export function HandbuchClient({ chapters, locale }: Props) {
               </p>
             </div>
             <div className="flex items-center gap-2 print:hidden">
-              <a
-                href={`/api/handbuch/pdf?locale=${locale}`}
-                download
+              <button
+                onClick={() => downloadPDF(chapters, locale)}
                 className="flex items-center gap-2 text-sm text-white bg-amber-600 hover:bg-amber-700 rounded-lg px-4 py-2 transition-colors"
               >
                 <Download size={14} />
                 {l.download}
-              </a>
+              </button>
               <button
                 onClick={() => window.print()}
                 className="flex items-center gap-2 text-sm text-muted-foreground border border-border rounded-lg px-4 py-2 hover:bg-muted transition-colors"

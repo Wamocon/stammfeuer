@@ -42,8 +42,49 @@ on:
 jobs:
   deploy:
     name: Deploy - ${{ inputs.environment }}
-    uses: Wamocon/github_workflow/.github/workflows/deploy.yml@main
-    with:
-      vercel_env: ${{ inputs.environment }}
-      db_schema: ${{ inputs.db_schema }}
-    secrets: inherit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      NEXT_PUBLIC_DB_SCHEMA: ${{ inputs.db_schema || 'public' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel environment
+        run: |
+          export GITHUB_ACTIONS=""
+          export GITHUB_REPOSITORY=""
+          vercel pull --yes --environment=${{ inputs.environment }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build project
+        run: |
+          export GITHUB_ACTIONS=""
+          export GITHUB_REPOSITORY=""
+          if [[ "${{ inputs.environment }}" == "production" ]]; then
+            vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+          else
+            vercel build --token=${{ secrets.VERCEL_TOKEN }}
+          fi
+
+      - name: Deploy to Vercel
+        run: |
+          export GITHUB_ACTIONS=""
+          export GITHUB_REPOSITORY=""
+          PROD_FLAG=""
+          [[ "${{ inputs.environment }}" == "production" ]] && PROD_FLAG="--prod"
+          vercel deploy --prebuilt $PROD_FLAG --yes --token=${{ secrets.VERCEL_TOKEN }}

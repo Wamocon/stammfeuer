@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   description:
     'Das kollaborative Familienarchiv. Bewahre Geschichten, Rezepte, Traditionen und Weisheiten für alle Generationen.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'https://ahnenecho.eu'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://ahnenecho.eu'),
 }
 
 interface LocaleLayoutProps {
